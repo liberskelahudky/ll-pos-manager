@@ -269,6 +269,16 @@
       "dateFrom": null,
       "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "mo8l8efkjfwvk",
+      "name": "Svatební koláče",
+      "stock": 1,
+      "photo": "https://drive.google.com/thumbnail?id=1aW3vQqTKTF5ngbobUIRYf_xQ4DXOMkqY&sz=w400",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-21T12:16:19.472Z"
     }
   ],
   "stores": [
