@@ -374,14 +374,24 @@ async function ghRead(){
     if(!r.ok)return null;
     const j=await r.json();
     ghSha=j.sha;
-    return JSON.parse(atob(j.content.replace(/\n/g,'')));
+    // Dekóduj base64 s podporou diakritiky
+    const binary=atob(j.content.replace(/\n/g,''));
+    const bytes=new Uint8Array(binary.length);
+    for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
+    const json=new TextDecoder().decode(bytes);
+    return JSON.parse(json);
   }catch(e){return null;}
 }
 
 async function ghWrite(data){
   if(!ghOK())return false;
   try{
-    const content=btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
+    const json=JSON.stringify(data,null,2);
+    // btoa nefunguje s diakritikou — musíme enkódovat přes TextEncoder
+    const bytes=new TextEncoder().encode(json);
+    let binary='';
+    bytes.forEach(b=>binary+=String.fromCharCode(b));
+    const content=btoa(binary);
     const body={message:`POS update ${new Date().toLocaleString('cs')}`,content};
     if(ghSha)body.sha=ghSha;
     const r=await fetch(`https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${GH.file}`,
