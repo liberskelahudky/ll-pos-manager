@@ -1,0 +1,540 @@
+{
+  "campaigns": [
+    {
+      "id": "19d94defa38a9514",
+      "name": "Dezert pistáciový",
+      "stock": 8,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa3ebm982",
+      "name": "Den dětí",
+      "stock": 5,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa441f1e1",
+      "name": "Česká bageta",
+      "stock": 10,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa4ai39j6",
+      "name": "Máslová brioška",
+      "stock": 19,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa50c3d7m",
+      "name": "Den dětí (2)",
+      "stock": 23,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa55f1ma9",
+      "name": "Dezert švestky s mákem",
+      "stock": 6,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa5ah61nk",
+      "name": "Dýňové latté",
+      "stock": 24,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa60po7lb",
+      "name": "Hraběnčiny řezy",
+      "stock": 18,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa6711n8l",
+      "name": "Chia s pažitkou",
+      "stock": 8,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa6eehh6j",
+      "name": "Fit kombinace",
+      "stock": 11,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa74k8ji6",
+      "name": "Ice tea",
+      "stock": 18,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa7a1ib5m",
+      "name": "Jarní chlebíček ČB",
+      "stock": 1,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa80g969e",
+      "name": "Nejen chlebíček",
+      "stock": 10,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa86f0aon",
+      "name": "Libeřské koláče",
+      "stock": 13,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa8c035nk",
+      "name": "Toasty",
+      "stock": 14,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa934l3g9",
+      "name": "Avokádový chlebík",
+      "stock": 7,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa987mkhl",
+      "name": "Limča",
+      "stock": 17,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defa9e690d5",
+      "name": "Rybízový koláč",
+      "stock": 18,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defaa594g4e",
+      "name": "Svatební koláče",
+      "stock": 18,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defaaa89j98",
+      "name": "Vaječný chlebíček",
+      "stock": 18,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defab0cggnl",
+      "name": "Chlebíček cottage",
+      "stock": 3,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defab608plk",
+      "name": "Matcha latté",
+      "stock": 4,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defb18h84no",
+      "name": "Linecká srdce",
+      "stock": 22,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defb872m0pj",
+      "name": "Mrkvový koláč",
+      "stock": 14,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defbe95856i",
+      "name": "Vánočka",
+      "stock": 20,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defc5e48inc",
+      "name": "Bramborový salát",
+      "stock": 22,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "19d94defcbfb6id4",
+      "name": "Dárkové karty vánoce",
+      "stock": 7,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-01T00:00:00.000Z"
+    }
+  ],
+  "stores": [
+    {
+      "id": "s01",
+      "num": 1,
+      "name": "Na Poříčí",
+      "tags": {
+        "zmrz": true,
+        "tv": 0,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s02",
+      "num": 2,
+      "name": "Holešovice",
+      "tags": {
+        "zmrz": true,
+        "tv": 4,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s03",
+      "num": 3,
+      "name": "Vodičkova",
+      "tags": {
+        "zmrz": true,
+        "tv": 4,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s04",
+      "num": 4,
+      "name": "Arkády",
+      "tags": {
+        "zmrz": false,
+        "tv": 5,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s05",
+      "num": 5,
+      "name": "Budějovická",
+      "tags": {
+        "zmrz": true,
+        "tv": 4,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s06",
+      "num": 6,
+      "name": "Krč",
+      "tags": {
+        "zmrz": true,
+        "tv": 3,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s07",
+      "num": 7,
+      "name": "Letná",
+      "tags": {
+        "zmrz": true,
+        "tv": 3,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s08",
+      "num": 8,
+      "name": "Palmovka",
+      "tags": {
+        "zmrz": true,
+        "tv": 5,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s09",
+      "num": 9,
+      "name": "Palmovka cukrárna",
+      "tags": {
+        "zmrz": true,
+        "tv": 0,
+        "kiosek": false,
+        "vyrobna": false
+      },
+      "photos": []
+    },
+    {
+      "id": "s10",
+      "num": 10,
+      "name": "Modřany",
+      "tags": {
+        "zmrz": false,
+        "tv": 1,
+        "kiosek": false,
+        "vyrobna": false
+      },
+      "photos": []
+    },
+    {
+      "id": "s11",
+      "num": 11,
+      "name": "Ruzyně",
+      "tags": {
+        "zmrz": true,
+        "tv": 1,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s12",
+      "num": 12,
+      "name": "Smíchov",
+      "tags": {
+        "zmrz": true,
+        "tv": 3,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s13",
+      "num": 13,
+      "name": "Háje",
+      "tags": {
+        "zmrz": true,
+        "tv": 3,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s14",
+      "num": 14,
+      "name": "DBK",
+      "tags": {
+        "zmrz": true,
+        "tv": 5,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s15",
+      "num": 15,
+      "name": "Dejvice",
+      "tags": {
+        "zmrz": true,
+        "tv": 3,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s16",
+      "num": 16,
+      "name": "Jesenice",
+      "tags": {
+        "zmrz": false,
+        "tv": 0,
+        "kiosek": false,
+        "vyrobna": false
+      },
+      "photos": []
+    },
+    {
+      "id": "s17",
+      "num": 17,
+      "name": "Libeř",
+      "tags": {
+        "zmrz": true,
+        "tv": 0,
+        "kiosek": false,
+        "vyrobna": false
+      },
+      "photos": []
+    },
+    {
+      "id": "s18",
+      "num": 18,
+      "name": "Vysočany",
+      "tags": {
+        "zmrz": false,
+        "tv": 2,
+        "kiosek": false,
+        "vyrobna": false
+      },
+      "photos": []
+    },
+    {
+      "id": "s19",
+      "num": 19,
+      "name": "České Budějovice",
+      "tags": {
+        "zmrz": true,
+        "tv": 3,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s20",
+      "num": 20,
+      "name": "I.P. Pavlova",
+      "tags": {
+        "zmrz": true,
+        "tv": 6,
+        "kiosek": true,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s21",
+      "num": 21,
+      "name": "OC Smíchov",
+      "tags": {
+        "zmrz": false,
+        "tv": 4,
+        "kiosek": false,
+        "vyrobna": true
+      },
+      "photos": []
+    },
+    {
+      "id": "s22",
+      "num": 22,
+      "name": "Hl. Nádraží",
+      "tags": {
+        "zmrz": true,
+        "tv": 6,
+        "kiosek": true,
+        "vyrobna": false
+      },
+      "photos": []
+    }
+  ]
+}
