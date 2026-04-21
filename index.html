@@ -200,6 +200,7 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
   </nav>
   <div class="ha no-print">
     <span id="sync-badge" style="font-size:.75rem;color:rgba(255,255,255,.6);padding:4px 10px;transition:opacity .4s;opacity:0;white-space:nowrap"></span>
+    <button class="bh" onclick="setupToken()" id="gh-btn">⚙ GitHub</button>
     <button class="bh" onclick="exportD()">↓ Export</button>
     <label class="bh" style="cursor:pointer">↑ Import<input type="file" accept=".json" style="display:none" onchange="importD(this)"></label>
   </div>
@@ -353,13 +354,14 @@ let activeCampId=null;
 let tmpCampPhoto=null;
 
 // ── GITHUB CONFIG ─────────────────────────────────────────────────────────────
+// GH config se načítá z localStorage — nikdy není v kódu
 const GH={
-  owner: 'VYPLŇ',      // GitHub username
-  repo:  'VYPLŇ',      // název repozitáře
-  token: 'VYPLŇ',      // Personal Access Token
+  owner: 'liberskelahudky',
+  repo:  'll-pos-manager',
+  get token(){return localStorage.getItem('llpos_gh_token')||'';},
   file:  'data.json'
 };
-const ghOK=()=>GH.owner!=='VYPLŇ'&&GH.token!=='VYPLŇ';
+const ghOK=()=>!!GH.token;
 let ghSha=null;
 let _saveTimer=null;
 
@@ -507,7 +509,39 @@ function allFrames(){
   return f;
 }
 
+function setupToken(){
+  const cur=localStorage.getItem('llpos_gh_token')||'';
+  const t=prompt('Vlož GitHub Personal Access Token\n(uloží se jen v tvém prohlížeči, nikdy v kódu):',cur);
+  if(t===null)return;
+  if(t.trim()){
+    localStorage.setItem('llpos_gh_token',t.trim());
+    toast('Token uložen — synchronizace aktivní ✓');
+    updateGhBtn();
+    // Reload data from GitHub
+    load().then(()=>switchTab(document.querySelector('nav button.active')?.dataset?.tab||'kampane'));
+  } else {
+    localStorage.removeItem('llpos_gh_token');
+    toast('Token odebrán — běžím offline');
+    updateGhBtn();
+  }
+}
+
+function updateGhBtn(){
+  const btn=document.getElementById('gh-btn');
+  if(!btn)return;
+  const hasToken=!!localStorage.getItem('llpos_gh_token');
+  btn.textContent=hasToken?'⚙ GitHub ✓':'⚙ GitHub';
+  btn.style.color=hasToken?'#6ee7b7':'rgba(255,255,255,.6)';
+}
+
 async function init(){
+  updateGhBtn();
+  // Pokud není token, zobraz prompt při prvním spuštění
+  if(!localStorage.getItem('llpos_gh_token')){
+    const t=prompt('Pro sdílení dat zadej GitHub Personal Access Token\n(nebo Cancel pro offline provoz):');
+    if(t&&t.trim())localStorage.setItem('llpos_gh_token',t.trim());
+    updateGhBtn();
+  }
   await load();
   document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
   switchTab('kampane');
