@@ -655,14 +655,7 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaav1gov8pol",
-          "label": "",
-          "src": null,
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s22",
