@@ -328,14 +328,7 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaal65qr9247",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s05",
