@@ -359,7 +359,14 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaamo3kkx1md",
+          "label": "",
+          "src": null,
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s06",
