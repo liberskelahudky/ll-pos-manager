@@ -445,7 +445,18 @@
           "id": "moaamo3kkx1md",
           "label": "",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "moaax3k8m53bu",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 3.395585738539898,
+              "y": 25.46397988094101,
+              "w": 12.733446519524618,
+              "h": 41.96988507942572
+            }
+          ]
         },
         {
           "id": "moaan11jymbrb",
