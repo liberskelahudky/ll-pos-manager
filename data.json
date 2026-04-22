@@ -450,7 +450,14 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaanr5uyecps",
+          "label": "",
+          "src": null,
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s12",
