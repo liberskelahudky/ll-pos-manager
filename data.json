@@ -938,7 +938,18 @@
           "id": "moaatanr2foth",
           "label": "",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "moaazllnqpbbs",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 19.864176570458405,
+              "y": 44.933626205711015,
+              "w": 10.016977928692697,
+              "h": 32.19049438130711
+            }
+          ]
         }
       ]
     },
