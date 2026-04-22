@@ -574,7 +574,14 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaasxfcs6xak",
+          "label": "",
+          "src": null,
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s18",
