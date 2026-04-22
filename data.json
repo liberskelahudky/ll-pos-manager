@@ -623,7 +623,14 @@
         "kiosek": true,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaatj1twv8d0",
+          "label": "",
+          "src": null,
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s21",
