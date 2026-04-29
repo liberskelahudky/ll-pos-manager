@@ -469,8 +469,14 @@
       "photos": [
         {
           "id": "mok284miy8jga",
-          "label": "",
+          "label": "Venkovní pohled",
           "src": "__idb__",
+          "rects": []
+        },
+        {
+          "id": "mok28nxxrrhgo",
+          "label": "",
+          "src": null,
           "rects": []
         }
       ]
