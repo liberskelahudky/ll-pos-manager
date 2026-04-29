@@ -522,7 +522,7 @@
             {
               "id": "mok2uvcg2y5br",
               "label": "A1 rám 2",
-              "type": "led_out",
+              "type": "led_in",
               "campaignId": null,
               "x": 55.34804753820034,
               "y": 31.818037118390475,
