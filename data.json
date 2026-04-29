@@ -886,7 +886,18 @@
           "id": "mok26taa1h1re",
           "label": "Vnitří pohled",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "mok27c54telwg",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 6.112054329371817,
+              "y": 16.817877948619998,
+              "w": 20.0339558573854,
+              "h": 63.56603953777099
+            }
+          ]
         }
       ]
     },
