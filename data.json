@@ -279,6 +279,16 @@
       "dateFrom": null,
       "dateTo": null,
       "createdAt": "2026-04-21T12:16:19.472Z"
+    },
+    {
+      "id": "mok0qs85nczei",
+      "name": "Nové ovoce",
+      "stock": 80,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": "2026-05-04",
+      "dateTo": "2026-05-10",
+      "createdAt": "2026-04-29T12:15:59.333Z"
     }
   ],
   "stores": [
