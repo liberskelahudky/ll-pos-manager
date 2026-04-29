@@ -656,7 +656,7 @@
             {
               "id": "moaax67eod80b",
               "label": "A1 rám 2",
-              "type": "led_out",
+              "type": "led_in",
               "campaignId": "19d94defa3ebm982",
               "x": 44.312393887945674,
               "y": 36.05831980390285,
