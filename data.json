@@ -532,7 +532,7 @@
             {
               "id": "mok2uycze9uft",
               "label": "A1 rám 3",
-              "type": "led_out",
+              "type": "led_in",
               "campaignId": null,
               "x": 71.30730050933785,
               "y": 33.85541018049852,
