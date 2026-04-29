@@ -1042,7 +1042,7 @@
             {
               "id": "moaayrilbwcqk",
               "label": "A1 rám 2",
-              "type": "led_out",
+              "type": "led_in",
               "campaignId": null,
               "x": 74.53310696095076,
               "y": 25.868271097953077,
