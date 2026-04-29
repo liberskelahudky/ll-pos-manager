@@ -337,7 +337,18 @@
           "id": "mok0xq24tzlsu",
           "label": "Venkovní pohled, ulice na Poříčí",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "mok1plhb2bv00",
+              "label": "A1 zvenku 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 16.808149405772497,
+              "y": 19.43781237067456,
+              "w": 10.186757215619693,
+              "h": 31.7830197688855
+            }
+          ]
         },
         {
           "id": "mok1obpt0nu5f",
