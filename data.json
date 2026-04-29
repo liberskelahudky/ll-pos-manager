@@ -890,7 +890,7 @@
             {
               "id": "mok27c54telwg",
               "label": "A1 rám 1",
-              "type": "led_out",
+              "type": "led_in",
               "campaignId": null,
               "x": 6.112054329371817,
               "y": 16.817877948619998,
