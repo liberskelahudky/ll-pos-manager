@@ -395,7 +395,7 @@
             {
               "id": "mok1pv77myiyq",
               "label": "A1 rám 1",
-              "type": "led_out",
+              "type": "led_in",
               "campaignId": null,
               "x": 64.85568760611206,
               "y": 12.507560564097666,
