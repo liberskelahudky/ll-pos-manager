@@ -70,9 +70,9 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
 .fcard.assigned{border-color:var(--or)}
 .fcard.other{border-color:var(--am);opacity:.75}
 .fcard.empty-f{border-style:dashed}
-.fcard-photo{position:relative;height:130px;background:var(--bg);overflow:hidden}
-.fcard-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.fcard-photo-ph{height:100%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;opacity:.2}
+.fcard-photo{position:relative;background:var(--bg);overflow:hidden;max-height:200px}
+.fcard-photo img{width:100%;height:auto;display:block;max-height:200px;object-fit:contain}
+.fcard-photo-ph{height:120px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;opacity:.2}
 .fcard-hl{position:absolute;border:3px solid;border-radius:2px;pointer-events:none}
 .fcard-check{position:absolute;top:6px;right:6px;width:22px;height:22px;border-radius:50%;border:2.5px solid #fff;background:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#fff;font-weight:800;transition:.15s}
 .fcard.assigned .fcard-check{background:var(--or)}
@@ -115,9 +115,18 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
 .dov{position:absolute;inset:0;z-index:20;cursor:crosshair;display:none}
 
 /* ── SETUP RECTS ── */
-.srect{position:absolute;border:2.5px solid;border-radius:3px;cursor:pointer;overflow:hidden}
+.srect{position:absolute;border:2.5px solid;border-radius:3px;cursor:pointer;overflow:visible}
 .srect:hover{box-shadow:0 0 0 3px rgba(255,255,255,.5)}
-.srect-lbl{position:absolute;bottom:0;left:0;right:0;font-size:.75rem;font-weight:800;padding:5px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.2px;color:#fff;pointer-events:none;background:linear-gradient(transparent,rgba(0,0,0,.75));text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.srect-lbl{position:absolute;top:calc(100% + 5px);left:50%;transform:translateX(-50%);color:#fff;font-size:.65rem;font-weight:800;padding:3px 9px;border-radius:20px;white-space:nowrap;pointer-events:none;letter-spacing:.2px;box-shadow:0 2px 8px rgba(0,0,0,.35);z-index:20}
+.srect-lbl::before{content:'';position:absolute;bottom:100%;left:50%;transform:translateX(-50%);border:4px solid transparent}
+.srect.prio-1 .srect-lbl{background:#e8530a}
+.srect.prio-1 .srect-lbl::before{border-bottom-color:#e8530a}
+.srect.prio-1{border-width:3px!important}
+.srect.prio-2 .srect-lbl{background:#1a58a8}
+.srect.prio-2 .srect-lbl::before{border-bottom-color:#1a58a8}
+.srect.prio-3 .srect-lbl{background:#7b3fb5}
+.srect.prio-3 .srect-lbl::before{border-bottom-color:#7b3fb5}
+.srect.prio-3{border-style:dashed!important;opacity:.85}
 .srect-del{position:absolute;top:3px;right:3px;font-size:.65rem;cursor:pointer;color:#fff;font-weight:800;opacity:0;background:rgba(0,0,0,.55);border-radius:3px;padding:2px 5px;line-height:1.5;z-index:5;transition:.12s}
 .srect:hover .srect-del{opacity:1}
 .rh{position:absolute;width:8px;height:8px;border:2px solid #fff;border-radius:2px;z-index:4}
@@ -233,8 +242,15 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
   </div>
   <!-- CAMPAIGN PICKER — big cards -->
   <div id="camp-picker" class="no-print" style="margin-bottom:20px"></div>
-  <!-- BULK BAR -->
-  <div id="bulk-bar" class="no-print" style="display:none;margin-bottom:16px;padding:10px 14px;background:var(--s);border-radius:var(--rs);box-shadow:var(--ss);gap:8px;align-items:center;flex-wrap:wrap"></div>
+  <!-- PRIORITY FILTER -->
+  <div id="prio-filter" class="no-print" style="display:none;margin-bottom:16px;display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+    <span style="font-size:.8rem;font-weight:700;color:var(--t2)">Zobrazit:</span>
+    <button onclick="setPrioFilter(null)" id="pf-all" class="btn bp bsm">Vše</button>
+    <button onclick="setPrioFilter('1')" id="pf-1" class="btn bs bsm" style="border-color:#e8530a;color:#e8530a">① Hlavní</button>
+    <button onclick="setPrioFilter('2')" id="pf-2" class="btn bs bsm" style="border-color:#1a58a8;color:#1a58a8">② Vedlejší</button>
+    <button onclick="setPrioFilter('3')" id="pf-3" class="btn bs bsm" style="border-color:#7b3fb5;color:#7b3fb5">③ Doplňkový</button>
+    <span id="pf-count" style="font-size:.8rem;color:var(--t3);margin-left:4px"></span>
+  </div>
   <!-- FRAMES GRID — always visible -->
   <div id="assign-grid"></div>
 </div>
@@ -287,10 +303,13 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
     <div class="mbd">
       <div class="fg"><label class="lb">Název *</label><input class="fi" id="kn" type="text" placeholder="např. Léto 2026"></div>
       <div class="fg">
-        <label class="lb">Foto vizuálu <span style="font-weight:500;text-transform:none;color:var(--t2)">(ideálně na výšku)</span></label>
+        <label class="lb">Vizuál — odkaz nebo soubor</label>
+        <input class="fi" id="kphurl" type="url" placeholder="https://drive.google.com/... nebo Imgur odkaz" style="margin-bottom:7px" oninput="campPhUrl(this)">
+        <div style="font-size:.75rem;color:var(--t3);margin-bottom:7px;text-align:center">— nebo nahraj soubor —</div>
         <label class="uz" id="kphz"><input type="file" accept="image/*" onchange="campPh(this)">
           <div style="font-size:1.25rem">🖼</div><div style="font-size:.8rem;color:var(--t2);margin-top:3px">Klikni nebo přetáhni</div>
         </label>
+        <div id="kph-preview" style="margin-top:7px"></div>
       </div>
       <div class="fg">
         <label class="lb">Počet kusů A1</label>
@@ -351,6 +370,25 @@ const DEFAULT_STORES=STORE_NAMES.map(([n,nm,tg])=>mkStore(n,nm,tg));
 let S={campaigns:[],stores:[]};
 let expandedStores=new Set();
 let activeCampId=null;
+let prioFilter=null; // null = all, '1'/'2'/'3'
+
+function setPrioFilter(val){
+  prioFilter=val;
+  // Update button styles
+  ['all','1','2','3'].forEach(k=>{
+    const btn=document.getElementById('pf-'+k);
+    if(!btn)return;
+    const isActive=(val===null&&k==='all')||(val===k);
+    btn.className=isActive?'btn bp bsm':'btn bs bsm';
+    if(!isActive){
+      if(k==='1')btn.style.cssText='border-color:#e8530a;color:#e8530a';
+      else if(k==='2')btn.style.cssText='border-color:#1a58a8;color:#1a58a8';
+      else if(k==='3')btn.style.cssText='border-color:#7b3fb5;color:#7b3fb5';
+      else btn.style.cssText='';
+    } else btn.style.cssText='';
+  });
+  renderAssignGrid();
+}
 let tmpCampPhoto=null;
 
 // ── GITHUB CONFIG ─────────────────────────────────────────────────────────────
@@ -373,7 +411,7 @@ async function ghRead(){
     if(r.status===404)return null;
     if(!r.ok)return null;
     const j=await r.json();
-    ghSha=j.sha;
+    ghSha=j.sha;_lastGhSha=j.sha;
     // Dekóduj base64 s podporou diakritiky
     const binary=atob(j.content.replace(/\n/g,''));
     const bytes=new Uint8Array(binary.length);
@@ -426,24 +464,23 @@ async function save(){
   try{await Promise.all(Object.entries(pm).map(([k,v])=>idbSet(k,v)));}catch(e){}
   // Vždy ulož lokálně
   try{localStorage.setItem(SK,JSON.stringify(stripped));}catch(e){}
-  // GitHub — debounce 800ms
+  // GitHub — debounce 2s, tiše (badge jen na chvíli po dokončení)
   clearTimeout(_saveTimer);
   _saveTimer=setTimeout(async()=>{
     if(!ghOK())return;
-    setSyncBadge('⏳ Ukládám na GitHub...',true);
     const ok=await ghWrite(stripped);
-    setSyncBadge(ok?'✓ Uloženo':'⚠ GitHub nedostupný');
-  },800);
+    if(ok)setSyncBadge('✓ Uloženo');
+    // při chybě nic nezobrazuj — localStorage funguje vždy
+  },2000);
 }
 
 // ── LOAD ─────────────────────────────────────────────────────────────────────
 async function load(){
   let data=null;
   if(ghOK()){
-    setSyncBadge('⏳ Načítám z GitHubu...',true);
+    setSyncBadge('⏳ Načítám...',true);
     data=await ghRead();
-    if(data)setSyncBadge('✓ Synchronizováno');
-    else setSyncBadge('⚠ GitHub nedostupný — načítám lokálně');
+    setSyncBadge(data?'✓ Online':'');
   }
   if(!data){
     try{const r=localStorage.getItem(SK);if(r)data=JSON.parse(r);}catch(e){}
@@ -546,7 +583,6 @@ function updateGhBtn(){
 
 async function init(){
   updateGhBtn();
-  // Pokud není token, zobraz prompt při prvním spuštění
   if(!localStorage.getItem('llpos_gh_token')){
     const t=prompt('Pro sdílení dat zadej GitHub Personal Access Token\n(nebo Cancel pro offline provoz):');
     if(t&&t.trim())localStorage.setItem('llpos_gh_token',t.trim());
@@ -555,6 +591,43 @@ async function init(){
   await load();
   document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
   switchTab('kampane');
+  // Auto-sync každých 30s
+  startAutoSync();
+}
+
+let _lastGhSha=null;
+function startAutoSync(){
+  if(!ghOK())return;
+  setInterval(async()=>{
+    if(!ghOK())return;
+    try{
+      const r=await fetch(`https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${GH.file}`,
+        {headers:{Authorization:`token ${GH.token}`,Accept:'application/vnd.github.v3+json'}});
+      if(!r.ok)return;
+      const j=await r.json();
+      // Pokud se SHA změnilo, někdo jiný uložil nová data
+      if(_lastGhSha&&j.sha!==_lastGhSha){
+        _lastGhSha=j.sha;
+        ghSha=j.sha;
+        // Načti nová data
+        const bytes=new Uint8Array(atob(j.content.replace(/\n/g,'')).split('').map(c=>c.charCodeAt(0)));
+        const data=JSON.parse(new TextDecoder().decode(bytes));
+        S.campaigns=data.campaigns||[];
+        S.stores=data.stores||DEFAULT_STORES;
+        await Promise.allSettled([
+          ...S.stores.flatMap(st=>st.photos.map(async ph=>{if(ph.src==='__idb__'){ph.src=await idbGet(ph.id)||null;}})),
+          ...S.campaigns.map(async c=>{if(c.photo==='__idb__'){c.photo=await idbGet('camp_'+c.id)||null;}})
+        ]);
+        migrate();
+        // Refreshni aktuální záložku
+        const tab=document.querySelector('nav button.active')?.dataset?.tab;
+        if(tab)switchTab(tab);
+        setSyncBadge('🔄 Aktualizováno');
+      } else if(!_lastGhSha){
+        _lastGhSha=j.sha;
+      }
+    }catch(e){}
+  },30000);
 }
 
 function switchTab(tab){
@@ -648,6 +721,22 @@ function renderCamps(){
   }).join('');
 }
 
+function campPhUrl(input){
+  const url=input.value.trim();
+  if(!url){tmpCampPhoto=null;document.getElementById('kph-preview').innerHTML='';return;}
+  // Extrahuj Google Drive File ID a použij thumbnail API (funguje pro PDF i obrázky)
+  const driveMatch=url.match(/\/d\/([a-zA-Z0-9_-]+)/)||url.match(/id=([a-zA-Z0-9_-]+)/);
+  let displayUrl=url;
+  let storeUrl=url;
+  if(driveMatch){
+    const id=driveMatch[1];
+    displayUrl=`https://drive.google.com/thumbnail?id=${id}&sz=w400`;
+    storeUrl=displayUrl; // uložíme thumbnail URL — funguje všem bez přihlášení
+  }
+  tmpCampPhoto=storeUrl;
+  document.getElementById('kph-preview').innerHTML=`<img src="${displayUrl}" style="width:100%;max-height:160px;object-fit:contain;border-radius:var(--rs);background:var(--bg);border:1.5px solid var(--bd);display:block" onerror="this.parentElement.innerHTML='<div style=\\'color:var(--rd);font-size:.8rem;padding:6px\\'>Soubor není veřejně sdílen — v Drive klikni Sdílet → Kdokoli s odkazem</div>'">`;
+}
+
 function campPh(input){
   const f=input.files[0];if(!f)return;
   const r=new FileReader();
@@ -655,8 +744,8 @@ function campPh(input){
     const c=document.createElement('canvas');let w=img.width,h=img.height;const mx=900;if(w>mx){h=Math.round(h*mx/w);w=mx;}
     c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);
     tmpCampPhoto=c.toDataURL('image/jpeg',.75);
-    const z=document.getElementById('kphz');
-    z.innerHTML=`<input type="file" accept="image/*" onchange="campPh(this)"><img src="${tmpCampPhoto}" class="uprev">`;
+    document.getElementById('kphurl').value='';
+    document.getElementById('kph-preview').innerHTML=`<img src="${tmpCampPhoto}" style="width:100%;max-height:160px;object-fit:contain;border-radius:var(--rs);background:var(--bg);border:1.5px solid var(--bd);display:block">`;
   };img.src=e.target.result;};r.readAsDataURL(f);
 }
 function saveCamp(){
@@ -692,6 +781,16 @@ function editCamp(id){
   document.getElementById('knote').value=c.note||'';
   document.getElementById('kdate-from').value=c.dateFrom||'';
   document.getElementById('kdate-to').value=c.dateTo||'';
+  // Show existing photo
+  const urlField=document.getElementById('kphurl');
+  const preview=document.getElementById('kph-preview');
+  if(c.photo&&!c.photo.startsWith('data:')){
+    urlField.value=c.photo;
+    preview.innerHTML=`<img src="${c.photo}" style="width:100%;max-height:160px;object-fit:contain;border-radius:var(--rs);background:var(--bg);border:1.5px solid var(--bd);display:block">`;
+  } else {
+    urlField.value='';
+    preview.innerHTML=c.photo?`<img src="${c.photo}" style="width:100%;max-height:160px;object-fit:contain;border-radius:var(--rs);background:var(--bg);border:1.5px solid var(--bd);display:block">`:'';
+  }
   const z=document.getElementById('kphz');
   z.innerHTML=c.photo
     ?`<input type="file" accept="image/*" onchange="campPh(this)"><img src="${c.photo}" class="uprev">`
@@ -699,12 +798,14 @@ function editCamp(id){
   tmpCampPhoto=null;
   document.getElementById('mov').classList.add('open');
 }
-function delCamp(id){
+async function delCamp(id){
   if(!confirm('Smazat kampaň? Odebere se ze všech rámů.'))return;
   S.stores.forEach(st=>st.photos.forEach(ph=>(ph.rects||[]).forEach(r=>{if(r.campaignId===id)r.campaignId=null;})));
   S.campaigns=S.campaigns.filter(x=>x.id!==id);
   if(activeCampId===id)activeCampId=null;
-  save();renderCamps();toast('Kampaň smazána');
+  await save();
+  renderCamps();
+  toast('Kampaň smazána');
 }
 function goAssign(cid){activeCampId=cid;switchTab('prirazeni');}
 
@@ -792,11 +893,16 @@ function buildPhotoBlock(st,ph){
     </div>
     <!-- frame list -->
     ${rects.length?`<div style="padding:6px 12px 10px;display:flex;flex-direction:column;gap:5px">
-      ${rects.map(r=>{const ft=FTC[r.type]||FTC.led_out;return`<div style="display:flex;align-items:center;gap:7px;padding:5px 9px;background:var(--bg);border-radius:var(--rs);border:1.5px solid var(--bd)">
+      ${rects.map(r=>{const ft=FTC[r.type]||FTC.led_out;return`<div style="display:flex;align-items:center;gap:7px;padding:5px 9px;background:var(--bg);border-radius:var(--rs);border:1.5px solid var(--bd);flex-wrap:wrap">
         <span style="width:10px;height:10px;border-radius:2px;background:${ft.bg};flex-shrink:0"></span>
-        <input style="border:none;background:transparent;font-family:inherit;font-size:.875rem;font-weight:600;flex:1;color:var(--tx);min-width:0" value="${esc(r.label||ft.label)}" onchange="updRL('${sid}','${phid}','${r.id}',this.value)">
+        <input style="border:none;background:transparent;font-family:inherit;font-size:.875rem;font-weight:600;flex:1;color:var(--tx);min-width:80px" value="${esc(r.label||ft.label)}" onchange="updRL('${sid}','${phid}','${r.id}',this.value)">
         <select style="border:none;background:transparent;font-family:inherit;font-size:.75rem;color:var(--t2);cursor:pointer" onchange="updRT('${sid}','${phid}','${r.id}',this.value)">
           ${Object.entries(FTC).map(([k,v])=>`<option value="${k}"${r.type===k?' selected':''}>${v.label}</option>`).join('')}
+        </select>
+        <select style="border:none;background:transparent;font-family:inherit;font-size:.8rem;font-weight:700;cursor:pointer;color:${r.priority==='1'?'#e8530a':r.priority==='3'?'#9ea3be':'#1a58a8'}" onchange="updRP('${sid}','${phid}','${r.id}',this.value)" title="Priorita místa">
+          <option value="1"${(!r.priority||r.priority==='1'||r.priority==='hlavni')?' selected':''}>① Hlavní</option>
+          <option value="2"${(r.priority==='2'||r.priority==='standard')?' selected':''}>② Vedlejší</option>
+          <option value="3"${(r.priority==='3'||r.priority==='doplnkovy')?' selected':''}>③ Doplňkový</option>
         </select>
         <button class="bi" style="color:var(--rd);font-size:.75rem" onclick="delR('${sid}','${phid}','${r.id}')">✕</button>
       </div>`;}).join('')}
@@ -806,8 +912,13 @@ function buildPhotoBlock(st,ph){
 
 function buildSRect(sid,phid,r){
   const ft=FTC[r.type]||FTC.led_out;
-  return`<div class="srect" id="sr-${r.id}" style="left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%;border-color:${ft.bg}">
-    <div class="srect-lbl" style="background:${ft.bg}cc">${esc(r.label||ft.label)}</div>
+  // migrate old names
+  const pMap={hlavni:'1',standard:'2',doplnkovy:'3'};
+  const prio=pMap[r.priority]||r.priority||'2';
+  const prioLabel={1:'①',2:'②',3:'③'}[prio]||'②';
+  const borderStyle=prio==='1'?`border:3px solid ${ft.bg}`:prio==='3'?`border:2px dashed ${ft.bg}88`:`border:2.5px solid ${ft.bg}`;
+  return`<div class="srect prio-${prio}" id="sr-${r.id}" style="left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%;${borderStyle}">
+    <div class="srect-lbl">${prioLabel} ${esc(r.label||ft.label)}</div>
     <div class="srect-del" onclick="delR('${sid}','${phid}','${r.id}')">✕</div>
     <div class="rh nw" data-c="nw"></div><div class="rh ne" data-c="ne"></div>
     <div class="rh sw" data-c="sw"></div><div class="rh se" data-c="se"></div>
@@ -846,12 +957,24 @@ function updPhLabel(sid,phid,val){
   const st=S.stores.find(s=>s.id===sid);if(!st)return;
   const ph=st.photos.find(p=>p.id===phid);if(ph){ph.label=val.trim();save();}
 }
-function updRL(sid,phid,rid,val){
+function updRP(sid,phid,rid,val){
   const st=S.stores.find(s=>s.id===sid);if(!st)return;
   const ph=st.photos.find(p=>p.id===phid);if(!ph)return;
-  const r=(ph.rects||[]).find(x=>x.id===rid);if(r){r.label=val.trim();save();const el=document.getElementById('sr-'+rid);if(el){const lb=el.querySelector('.srect-lbl');if(lb)lb.textContent=val.trim();}}
+  const r=(ph.rects||[]).find(x=>x.id===rid);if(!r)return;
+  r.priority=val;save();
+  const el=document.getElementById('sr-'+rid);
+  if(el){
+    const ft=FTC[r.type]||FTC.led_out;
+    el.className='srect prio-'+val;
+    if(val==='1')el.style.border=`3px solid ${ft.bg}`;
+    else if(val==='3')el.style.border=`2px dashed ${ft.bg}88`;
+    else el.style.border=`2.5px solid ${ft.bg}`;
+    const lbl=el.querySelector('.srect-lbl');
+    const prioLabel={'1':'①','2':'②','3':'③'}[val]||'②';
+    if(lbl)lbl.textContent=prioLabel+' '+esc(r.label||ft.label);
+  }
 }
-function updRT(sid,phid,rid,val){
+function updRL(sid,phid,rid,val){
   const st=S.stores.find(s=>s.id===sid);if(!st)return;
   const ph=st.photos.find(p=>p.id===phid);if(!ph)return;
   const r=(ph.rects||[]).find(x=>x.id===rid);if(r){r.type=val;save();const ft=FTC[val]||FTC.led_out;const el=document.getElementById('sr-'+rid);if(el){el.style.borderColor=ft.bg;const lb=el.querySelector('.srect-lbl');if(lb){lb.style.background=ft.bg+'cc';lb.textContent=r.label||ft.label;}}}
@@ -983,8 +1106,24 @@ function selCamp(cid){
 
 function renderAssignGrid(){
   const grid=document.getElementById('assign-grid');if(!grid)return;
-  const frames=allFrames();
-  if(!frames.length){grid.innerHTML=`<div class="empty"><div class="empty-i">⬜</div><div class="empty-t">Žádné rámy</div><div class="empty-s">Jdi na Nastavení prodejen → nahraj fotky → nakresli rámy</div></div>`;return;}
+  const allF=allFrames();
+  if(!allF.length){grid.innerHTML=`<div class="empty"><div class="empty-i">⬜</div><div class="empty-t">Žádné rámy</div><div class="empty-s">Jdi na Nastavení prodejen → nahraj fotky → nakresli rámy</div></div>`;return;}
+
+  // Show/update filter bar
+  const pf=document.getElementById('prio-filter');
+  if(pf)pf.style.display=activeCampId?'flex':'none';
+
+  // Normalize priority (migrate old names)
+  const pMap={hlavni:'1',standard:'2',doplnkovy:'3'};
+  allF.forEach(f=>{if(pMap[f.rect.priority])f.rect.priority=pMap[f.rect.priority];if(!f.rect.priority)f.rect.priority='2';});
+
+  // Apply priority filter
+  const frames=prioFilter?allF.filter(f=>f.rect.priority===prioFilter):allF;
+
+  // Update count
+  const pfc=document.getElementById('pf-count');
+  if(pfc&&prioFilter)pfc.textContent=`${frames.length} rámů`;
+  else if(pfc)pfc.textContent='';
 
   const activeCamp=activeCampId?S.campaigns.find(c=>c.id===activeCampId):null;
 
@@ -1009,7 +1148,7 @@ function renderAssignGrid(){
         ${tagHtml.length?`<div style="display:flex;gap:5px;flex-wrap:wrap;margin-left:4px">${tagHtml.join('')}</div>`:''}
         <div class="store-prog">${asgn}/${total}</div>
       </div>
-      <div class="frames-grid">${sf.map(({store:st,photo,rect})=>buildFCard(st,photo,rect)).join('')}</div>
+      <div class="frames-grid">${[...sf].sort((a,b)=>{const pMap={hlavni:'1',standard:'2',doplnkovy:'3'};const pa=pMap[a.rect.priority]||a.rect.priority||'2';const pb=pMap[b.rect.priority]||b.rect.priority||'2';return pa.localeCompare(pb);}).map(({store:st,photo,rect})=>buildFCard(st,photo,rect)).join('')}</div>
     </div>`;
   }).join('');
 
@@ -1026,19 +1165,13 @@ function renderAssignGrid(){
   </div>`:'';
 
   grid.innerHTML=storeBlocks+previewHtml;
-
-  // bulk bar
-  const ba=document.getElementById('bulk-bar');
-  if(ba&&activeCampId){
-    const freeF=frames.filter(f=>!f.rect.campaignId);
-    const myF=frames.filter(f=>f.rect.campaignId===activeCampId);
-    const p=pool(activeCampId);
-    ba.style.display='flex';
-    ba.innerHTML=`<button class="btn bp bsm" onclick="assignAll()" ${freeF.length===0||p.avail===0?'disabled':''}>⚡ Všechny volné (${Math.min(freeF.length,p.avail)})</button>
-      ${myF.length?`<button class="btn bs bsm" onclick="unassignAll()">✕ Odebrat moje (${myF.length})</button>`:''}
-      <span style="margin-left:auto;font-size:.8rem;color:var(--t3)">${p.avail} zbývá v zásobníku</span>`;
-  } else if(ba) ba.style.display='none';
 }
+
+const PCFG={
+  '1':{label:'① Hlavní',col:'#e8530a',border:'3px solid #e8530a',shadow:'rgba(232,83,10,.2)'},
+  '2':{label:'② Vedlejší',col:'#1a58a8',border:'2.5px solid #1a58a8',shadow:'rgba(26,88,168,.15)'},
+  '3':{label:'③ Doplňkový',col:'#7b3fb5',border:'2px dashed #7b3fb5',shadow:''}
+};
 
 function buildFCard(st,photo,rect){
   const ft=FTC[rect.type]||FTC.led_out;
@@ -1047,26 +1180,35 @@ function buildFCard(st,photo,rect){
   const otherCamp=isOther?S.campaigns.find(c=>c.id===rect.campaignId):null;
   const activeCamp=activeCampId?S.campaigns.find(c=>c.id===activeCampId):null;
   const shownCamp=isActive?activeCamp:isOther?otherCamp:null;
+  // Normalize priority
+  const pMap={hlavni:'1',standard:'2',doplnkovy:'3'};
+  const prioKey=pMap[rect.priority]||rect.priority||'2';
+  const pc=PCFG[prioKey]||PCFG['2'];
   let cls='fcard';
   if(isActive)cls+=' assigned';else if(isOther)cls+=' other';else cls+=' empty-f';
 
-  // Store photo with highlighted rect frame (no visual overlay)
+  // Priority-colored top strip on card
+  const prioStrip=`<div style="height:4px;background:${pc.col};opacity:${prioKey==='3'?'.5':'1'}"></div>`;
+
   const storeThumb=photo.src
-    ?`<img src="${photo.src}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
-       <div class="fcard-hl" style="left:${rect.x}%;top:${rect.y}%;width:${rect.w}%;height:${rect.h}%;border-color:${ft.bg}"></div>
+    ?`<img src="${photo.src}" alt="" style="width:100%;height:auto;max-height:200px;object-fit:contain;display:block">
+       <div class="fcard-hl" style="left:${rect.x}%;top:${rect.y}%;width:${rect.w}%;height:${rect.h}%;border:${pc.border}"></div>
        <div class="fcard-check">${isActive?'✓':isOther?'!':''}</div>`
     :`<div class="fcard-photo-ph">📷</div><div class="fcard-check">${isActive?'✓':''}</div>`;
 
-  // Campaign visual strip — shown BELOW the store photo, portrait A1 ratio
   const visStrip=shownCamp?.photo
     ?`<div class="fcard-vis-strip"><div class="vis-inner"><img src="${shownCamp.photo}" alt=""></div></div>`
     :`<div class="fcard-vis-strip"></div>`;
 
-  return`<div class="${cls}" onclick="toggleAssign('${st.id}','${photo.id}','${rect.id}')">
+  return`<div class="${cls}" onclick="toggleAssign('${st.id}','${photo.id}','${rect.id}')" style="${isActive&&pc.shadow?'box-shadow:0 0 0 3px '+pc.shadow:''}">
+    ${prioStrip}
     <div class="fcard-photo">${storeThumb}</div>
     ${visStrip}
     <div class="fcard-info">
-      <span class="fcard-type" style="background:${ft.bg}">${ft.label}</span>
+      <div style="display:flex;align-items:center;gap:5px;margin-bottom:4px;flex-wrap:wrap">
+        <span class="fcard-type" style="background:${ft.bg}">${ft.label}</span>
+        <span style="font-size:.65rem;font-weight:800;padding:1px 7px;border-radius:20px;background:${pc.col}18;color:${pc.col};border:1px solid ${pc.col}44">${pc.label}</span>
+      </div>
       <div class="fcard-label">${esc(rect.label||ft.label)}</div>
       <div class="fcard-camp" style="font-size:.7rem;color:var(--t3)">${esc(photo.label||'')}</div>
       <div class="fcard-camp">${isActive?'✓ '+esc(activeCamp?.name||''):isOther?'⚠ '+esc(otherCamp?.name||''):'prázdné — klikni pro přiřazení'}</div>
@@ -1359,6 +1501,8 @@ function openM(){
   document.getElementById('mov').classList.add('open');
   document.getElementById('kn').value='';document.getElementById('kstock').value='';document.getElementById('knote').value='';
   document.getElementById('kdate-from').value='';document.getElementById('kdate-to').value='';
+  document.getElementById('kphurl').value='';
+  document.getElementById('kph-preview').innerHTML='';
   document.getElementById('kstock-current').textContent='';
   document.getElementById('kstock-hint').textContent='Zásobník — odečte se s každým přiřazením';
   document.getElementById('kphz').innerHTML='<input type="file" accept="image/*" onchange="campPh(this)"><div style="font-size:1.25rem">🖼</div><div style="font-size:.8rem;color:var(--t2);margin-top:3px">Klikni nebo přetáhni</div>';
