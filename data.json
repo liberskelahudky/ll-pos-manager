@@ -854,7 +854,14 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "mok26hqcicrq2",
+          "label": "",
+          "src": "__idb__",
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s15",
