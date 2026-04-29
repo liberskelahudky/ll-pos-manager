@@ -471,7 +471,18 @@
           "id": "mok284miy8jga",
           "label": "Venkovní pohled",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "mok2uk2klr2c7",
+              "label": "A1 zvenku 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 21.052631578947366,
+              "y": 38.33763091713622,
+              "w": 9.847198641765704,
+              "h": 35.85776589310158
+            }
+          ]
         },
         {
           "id": "mok2u7pdjv1yn",
