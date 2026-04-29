@@ -299,6 +299,16 @@
       "dateFrom": "2026-05-11",
       "dateTo": "2026-05-31",
       "createdAt": "2026-04-29T12:16:26.404Z"
+    },
+    {
+      "id": "mok0rtmtlpin9",
+      "name": "Řecký jogurt",
+      "stock": 80,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": "2026-05-04",
+      "dateTo": "2026-06-07",
+      "createdAt": "2026-04-29T12:16:47.813Z"
     }
   ],
   "stores": [
