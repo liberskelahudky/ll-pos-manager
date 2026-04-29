@@ -309,6 +309,16 @@
       "dateFrom": "2026-05-04",
       "dateTo": "2026-06-07",
       "createdAt": "2026-04-29T12:16:47.813Z"
+    },
+    {
+      "id": "mok0s8atqdkos",
+      "name": "Chléb a pomazánky",
+      "stock": 80,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": "2026-05-04",
+      "dateTo": "2026-06-07",
+      "createdAt": "2026-04-29T12:17:06.821Z"
     }
   ],
   "stores": [
