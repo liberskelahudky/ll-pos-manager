@@ -332,7 +332,14 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "mok0xq24tzlsu",
+          "label": "",
+          "src": null,
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s02",
