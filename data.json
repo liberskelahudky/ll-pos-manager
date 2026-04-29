@@ -976,7 +976,14 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "mok1xalirg5kt",
+          "label": "",
+          "src": null,
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s18",
