@@ -1151,7 +1151,18 @@
           "id": "mok1zen97mi15",
           "label": "Zevnitř",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "mok32t4dfww7z",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 3.5653650254668934,
+              "y": 31.111323337471745,
+              "w": 8.488964346349746,
+              "h": 26.893324419826186
+            }
+          ]
         }
       ]
     },
