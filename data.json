@@ -884,7 +884,7 @@
             {
               "id": "moaaya88l7k77",
               "label": "A1 rám 2",
-              "type": "led_out",
+              "type": "klapram",
               "campaignId": null,
               "x": 59.9320882852292,
               "y": 27.58093782828765,
