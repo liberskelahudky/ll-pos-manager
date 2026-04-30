@@ -4,178 +4,214 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LL POS Manager</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f2efe8;--s:#fff;--nv:#1b2044;--or:#e8530a;--or2:#d04a09;
-  --tx:#1b2044;--t2:#5c6182;--t3:#9ea3be;--bd:#ddd9ce;
-  --gn:#1c7a42;--gbg:#e7f4ee;--am:#a66000;--abg:#fef2e0;
-  --rd:#b83228;--r:12px;--rs:8px;
-  --sh:0 1px 4px rgba(27,32,68,.06),0 6px 20px rgba(27,32,68,.08);
-  --ss:0 1px 3px rgba(27,32,68,.07)
+  --bg:#F4F1EC;--s:#fff;--nv:#1C1917;--or:#D9502A;--or2:#B83A18;
+  --tx:#1C1917;--t2:#6B5E56;--t3:#B0A49C;--bd:#E4DDD7;
+  --gn:#3A7228;--gbg:#EAF4E6;--am:#C8810C;--abg:#FEF3DC;
+  --rd:#B83228;--rbg:#FCE8E8;--r:12px;--rs:8px;
+  --bl:#1A5A8A;--blbg:#DCEEF8;
+  --olive:#474B30;--cream:#FEF3DC;--blue:#C4D9E8;
+  --brown:#491C0A;
+  --sh:0 1px 3px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.07);
+  --ss:0 1px 2px rgba(0,0,0,.05)
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;-webkit-font-smoothing:antialiased}
-body{font-family:'Outfit',system-ui,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
 
-header{background:var(--nv);height:56px;padding:0 24px;display:flex;align-items:center;gap:20px;position:sticky;top:0;z-index:300;box-shadow:0 2px 16px rgba(0,0,0,.22)}
-.logo{font-weight:800;font-size:.9375rem;color:#fff;white-space:nowrap;flex-shrink:0}
-.logo em{color:var(--or);font-style:normal}
-nav{display:flex;gap:2px;flex:1}
-nav button{background:none;border:none;color:rgba(255,255,255,.45);font-family:inherit;font-size:.8125rem;font-weight:600;padding:6px 13px;border-radius:7px;cursor:pointer;transition:.15s;white-space:nowrap}
-nav button:hover{background:rgba(255,255,255,.08);color:rgba(255,255,255,.8)}
-nav button.active{background:var(--or);color:#fff}
-.ha{display:flex;gap:7px;margin-left:auto}
-.bh{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);font-family:inherit;font-size:.75rem;font-weight:600;padding:5px 11px;border-radius:6px;cursor:pointer;transition:.15s}
-.bh:hover{background:rgba(255,255,255,.15);color:#fff}
+header{
+  background:#fff;
+  height:56px;padding:0 28px;
+  display:flex;align-items:center;gap:24px;
+  position:sticky;top:0;z-index:300;
+  box-shadow:0 1px 0 #E4DDD7,0 2px 12px rgba(0,0,0,.04);
+  border-bottom:1px solid #EDE7E0;
+}
+.logo{
+  display:flex;align-items:center;gap:9px;
+  font-weight:800;font-size:1rem;color:var(--tx);
+  white-space:nowrap;flex-shrink:0;letter-spacing:-.01em;
+}
+.logo-mark{
+  width:30px;height:30px;border-radius:8px;
+  background:var(--or);display:flex;align-items:center;
+  justify-content:center;flex-shrink:0;
+}
+.logo-mark svg{display:block;}
+.logo em{color:var(--brown);font-style:normal;font-family:'Playfair Display',serif;font-size:1.05rem;}
+.logo span{color:var(--t3);font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-left:1px;}
 
-main{max-width:1280px;margin:0 auto;padding:26px 22px}
+nav{display:flex;gap:2px;flex:1;overflow-x:auto;}
+nav::-webkit-scrollbar{display:none;}
+nav button{
+  background:none;border:none;
+  color:var(--t2);
+  font-family:'DM Sans',inherit;font-size:.8125rem;font-weight:600;
+  padding:7px 14px;border-radius:8px;cursor:pointer;transition:.15s;
+  white-space:nowrap;letter-spacing:-.01em;
+}
+nav button:hover{background:var(--bg);color:var(--tx);}
+nav button.active{
+  background:var(--or);color:#fff;
+  box-shadow:0 2px 8px rgba(217,80,42,.3);
+}
+.ha{display:flex;gap:6px;margin-left:auto;align-items:center;}
+.bh{
+  background:var(--bg);border:1.5px solid var(--bd);
+  color:var(--t2);font-family:inherit;font-size:.75rem;font-weight:600;
+  padding:6px 12px;border-radius:7px;cursor:pointer;transition:.15s;
+  white-space:nowrap;
+}
+.bh:hover{background:#fff;color:var(--tx);border-color:#c8bfb8;}
+#sync-badge{font-size:.72rem;padding:4px 10px;background:var(--bg);border-radius:20px;color:var(--t2);}
+
+main{max-width:1320px;margin:0 auto;padding:28px 28px}
 .tab{display:none}
-.tab.active{display:block;animation:fi .15s ease}
-@keyframes fi{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
-.ph{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
-.ph-t{font-size:1.5rem;font-weight:800;color:var(--nv);letter-spacing:-.3px}
-.ph-s{font-size:.8rem;color:var(--t2);margin-top:3px}
+.tab.active{display:block;animation:fi .18s ease}
+@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.ph{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;gap:16px;}
+.ph-t{font-size:1.625rem;font-weight:800;color:var(--tx);letter-spacing:-.4px;font-family:'Playfair Display',serif;}
+.ph-s{font-size:.8125rem;color:var(--t2);margin-top:4px;font-weight:500;}
 
-.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 17px;border-radius:var(--rs);font-family:inherit;font-size:.875rem;font-weight:700;cursor:pointer;border:none;transition:.15s;white-space:nowrap;line-height:1}
-.bp{background:var(--or);color:#fff}.bp:hover{background:var(--or2)}
-.bs{background:var(--s);color:var(--tx);border:1.5px solid var(--bd)}.bs:hover{border-color:var(--nv)}
-.bg{background:none;border:none;color:var(--t2);padding:6px 10px;font-family:inherit;font-size:.875rem;font-weight:600;cursor:pointer}.bg:hover{background:var(--bg);color:var(--tx)}
-.bsm{padding:5px 11px;font-size:.8rem}
-.bi{background:transparent;border:none;cursor:pointer;color:var(--t3);padding:5px;border-radius:5px;transition:.15s;line-height:1;display:inline-flex;align-items:center}
-.bi:hover{background:var(--bg);color:var(--tx)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:var(--rs);font-family:'DM Sans',inherit;font-size:.875rem;font-weight:700;cursor:pointer;border:none;transition:.15s;white-space:nowrap;line-height:1;letter-spacing:-.01em;}
+.bp{background:var(--or);color:#fff;box-shadow:0 2px 8px rgba(217,80,42,.25);}.bp:hover{background:var(--or2);box-shadow:0 3px 12px rgba(217,80,42,.35);transform:translateY(-1px);}
+.bs{background:var(--s);color:var(--tx);border:1.5px solid var(--bd);}.bs:hover{border-color:var(--nv);background:#fdfaf7;}
+.bg{background:none;border:none;color:var(--t2);padding:6px 10px;font-family:inherit;font-size:.875rem;font-weight:600;cursor:pointer;border-radius:var(--rs);}.bg:hover{background:var(--bg);color:var(--tx);}
+.bsm{padding:6px 12px;font-size:.8rem;}
+.bi{background:transparent;border:none;cursor:pointer;color:var(--t3);padding:5px;border-radius:6px;transition:.15s;line-height:1;display:inline-flex;align-items:center;}
+.bi:hover{background:var(--bg);color:var(--tx);}
 
 /* ── CAMPAIGN STRIP ── */
 .camp-strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;margin-bottom:24px}
 .camp-strip::-webkit-scrollbar{height:3px}
 .camp-strip::-webkit-scrollbar-thumb{background:var(--bd);border-radius:2px}
-.vcard{flex-shrink:0;width:86px;cursor:pointer;border-radius:10px;border:3px solid transparent;transition:.2s;background:var(--s);box-shadow:var(--ss);overflow:hidden}
-.vcard:hover{transform:translateY(-2px);border-color:var(--bd)}
-.vcard.sel{border-color:var(--or);box-shadow:0 0 0 3px rgba(232,83,10,.15)}
-.vcard-img{height:116px;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden}
-.vcard-img img{width:100%;height:100%;object-fit:cover}
-.vcard-name{padding:5px 6px 4px;font-size:.7rem;font-weight:700;text-align:center;line-height:1.25;color:var(--tx)}
-.vcard.sel .vcard-name{color:var(--or)}
-.vcard-stat{padding:0 5px 6px;text-align:center;font-size:.7rem;font-weight:800;color:var(--t3)}
+.vcard{flex-shrink:0;width:90px;cursor:pointer;border-radius:12px;border:3px solid transparent;transition:.18s;background:var(--s);box-shadow:var(--ss);overflow:hidden;}
+.vcard:hover{transform:translateY(-3px);border-color:var(--bd);box-shadow:var(--sh);}
+.vcard.sel{border-color:var(--or);box-shadow:0 0 0 3px rgba(217,80,42,.15),var(--sh);}
+.vcard-img{height:120px;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.vcard-img img{width:100%;height:100%;object-fit:cover;}
+.vcard-name{padding:6px 7px 4px;font-size:.7rem;font-weight:700;text-align:center;line-height:1.25;color:var(--tx);}
+.vcard.sel .vcard-name{color:var(--or);}
+.vcard-stat{padding:0 6px 7px;text-align:center;font-size:.7rem;font-weight:800;color:var(--t3);}
 
 /* ── ASSIGN GRID ── */
-.assign-store-section{margin-bottom:22px}
-.assign-store-hdr{display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--bd)}
-.store-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--nv);color:#fff;border-radius:6px;font-size:.75rem;font-weight:700;flex-shrink:0}
-.store-nm{font-weight:800;font-size:1rem;flex:1}
-.store-prog{font-size:.75rem;color:var(--t3)}
-.frames-grid{display:flex;flex-wrap:wrap;gap:10px}
-.fcard{width:210px;border-radius:10px;border:3px solid var(--bd);background:var(--s);cursor:pointer;transition:.18s;overflow:hidden}
-.fcard:hover{transform:translateY(-2px);box-shadow:var(--sh)}
-.fcard.assigned{border-color:var(--or)}
-.fcard.other{border-color:var(--am);opacity:.75}
-.fcard.empty-f{border-style:dashed}
-.fcard-photo{position:relative;background:var(--bg);overflow:hidden;max-height:200px}
-.fcard-photo img{width:100%;height:auto;display:block;max-height:200px;object-fit:contain}
-.fcard-photo-ph{height:120px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;opacity:.2}
-.fcard-hl{position:absolute;border:3px solid;border-radius:2px;pointer-events:none}
-.fcard-check{position:absolute;top:6px;right:6px;width:22px;height:22px;border-radius:50%;border:2.5px solid #fff;background:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#fff;font-weight:800;transition:.15s}
-.fcard.assigned .fcard-check{background:var(--or)}
-/* Visual strip BELOW photo — portrait A1 */
-.fcard-vis-strip{max-height:0;overflow:hidden;transition:max-height .25s ease;border-top:0px solid transparent}
-.fcard.assigned .fcard-vis-strip{max-height:300px;border-top:2px solid var(--or)}
-.fcard.other .fcard-vis-strip{max-height:200px;border-top:2px solid var(--am)}
-.fcard-vis-strip .vis-inner{width:100%;aspect-ratio:1/1.414;background:var(--nv);display:flex;align-items:center;justify-content:center}
-.fcard-vis-strip img{width:100%;height:100%;object-fit:contain;display:block}
-.fcard-info{padding:8px 10px 9px}
-.fcard-type{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#fff;padding:2px 6px;border-radius:3px;display:inline-block;margin-bottom:4px}
-.fcard-label{font-weight:800;font-size:.875rem;line-height:1.2;margin-bottom:3px}
-.fcard-camp{font-size:.75rem;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fcard.assigned .fcard-camp{color:var(--or);font-weight:700}
+.assign-store-section{margin-bottom:28px;}
+.assign-store-hdr{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:10px;border-bottom:2px solid var(--bd);}
+.store-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:var(--or);color:#fff;border-radius:7px;font-size:.75rem;font-weight:800;flex-shrink:0;letter-spacing:-.01em;}
+.store-nm{font-weight:700;font-size:1rem;flex:1;color:var(--tx);}
+.store-prog{font-size:.75rem;color:var(--t3);font-weight:600;}
+.frames-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;}
+.fcard{border-radius:12px;border:2.5px solid var(--bd);background:var(--s);cursor:pointer;transition:.18s;overflow:hidden;}
+.fcard:hover{transform:translateY(-3px);box-shadow:var(--sh);}
+.fcard.assigned{border-color:var(--or);}
+.fcard.other{border-color:var(--am);opacity:.8;}
+.fcard.empty-f{border-style:dashed;}
+.fcard-photo{position:relative;background:var(--bg);overflow:hidden;max-height:200px;}
+.fcard-photo img{width:100%;height:auto;display:block;max-height:200px;object-fit:contain;}
+.fcard-photo-ph{height:120px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;opacity:.2;}
+.fcard-hl{position:absolute;border:3px solid;border-radius:3px;pointer-events:none;}
+.fcard-check{position:absolute;top:7px;right:7px;width:22px;height:22px;border-radius:50%;border:2.5px solid rgba(255,255,255,.7);background:rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#fff;font-weight:800;transition:.15s;}
+.fcard.assigned .fcard-check{background:var(--or);border-color:#fff;}
+.fcard-vis-strip{max-height:0;overflow:hidden;transition:max-height .25s ease;border-top:0px solid transparent;}
+.fcard.assigned .fcard-vis-strip{max-height:300px;border-top:2px solid var(--or);}
+.fcard.other .fcard-vis-strip{max-height:200px;border-top:2px solid var(--am);}
+.fcard-vis-strip .vis-inner{width:100%;aspect-ratio:1/1.414;background:var(--nv);display:flex;align-items:center;justify-content:center;}
+.fcard-vis-strip img{width:100%;height:100%;object-fit:contain;display:block;}
+.fcard-info{padding:9px 11px 11px;}
+.fcard-type{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:#fff;padding:2px 7px;border-radius:4px;display:inline-block;margin-bottom:5px;}
+.fcard-label{font-weight:800;font-size:.9rem;line-height:1.2;margin-bottom:3px;color:var(--tx);}
+.fcard-camp{font-size:.75rem;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.fcard.assigned .fcard-camp{color:var(--or);font-weight:700;}
 
 /* ── SETUP / ACCORDION ── */
-.acc{background:var(--s);border-radius:var(--r);box-shadow:var(--sh);margin-bottom:8px;overflow:hidden;border:2px solid transparent;transition:.15s}
-.acc.has-frames{border-color:rgba(232,83,10,.2)}
-.acc-hdr{padding:11px 16px;display:flex;align-items:center;gap:9px;cursor:pointer;user-select:none}
-.acc-hdr:hover{background:#faf9f6}
-.acc-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--nv);color:#fff;border-radius:5px;font-size:.7rem;font-weight:700;flex-shrink:0}
-.acc-name{font-weight:800;font-size:.9375rem;flex:1}
-.acc-info{font-size:.75rem;color:var(--t3)}
-.acc-arrow{color:var(--t3);font-size:.7rem;transition:.2s;flex-shrink:0}
-.acc.open .acc-arrow{transform:rotate(180deg)}
-.acc-body{display:none;padding:0 16px 16px;border-top:1px solid var(--bd)}
-.acc.open .acc-body{display:block}
+.acc{background:var(--s);border-radius:var(--r);box-shadow:var(--ss);margin-bottom:8px;overflow:hidden;border:2px solid transparent;transition:.15s;}
+.acc.has-frames{border-color:rgba(217,80,42,.18);}
+.acc.open{box-shadow:var(--sh);border-color:rgba(217,80,42,.25);}
+.acc-hdr{padding:13px 18px;display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;}
+.acc-hdr:hover{background:#fdf9f6;}
+.acc-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--bg);color:var(--t2);border:1.5px solid var(--bd);border-radius:6px;font-size:.72rem;font-weight:800;flex-shrink:0;}
+.acc-name{font-weight:700;font-size:1rem;flex:1;color:var(--tx);}
+.acc-info{font-size:.75rem;color:var(--t3);font-weight:500;}
+.acc-arrow{color:var(--t3);font-size:.65rem;transition:.22s;flex-shrink:0;}
+.acc.open .acc-arrow{transform:rotate(180deg);}
+.acc-body{display:none;padding:0 18px 18px;border-top:1px solid var(--bd);}
+.acc.open .acc-body{display:block;}
 
 /* ── PHOTO BLOCK (in setup) ── */
-.photo-blocks{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:16px;margin-top:14px}
-.pblock{border-radius:var(--rs);overflow:hidden;border:1.5px solid var(--bd)}
-.pblock-hdr{padding:8px 12px;display:flex;align-items:center;gap:8px;background:var(--bg);border-bottom:1px solid var(--bd)}
-.pblock-label{flex:1;font-weight:700;font-size:.875rem}
-.pblock-label-input{flex:1;font-family:inherit;font-size:.875rem;font-weight:700;border:none;background:transparent;color:var(--tx);min-width:0;padding:0}
-.pblock-label-input:focus{outline:none}
-.pcanvas{position:relative;overflow:hidden;background:#e8e4da;line-height:0;max-height:500px}
-.pcanvas img.photo-img{width:100%;height:auto;display:block;pointer-events:none;user-select:none}
-.pph{height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--t3);font-size:.8125rem;font-weight:500}
-.pfooter{padding:7px 12px;display:flex;gap:7px;flex-wrap:wrap;border-top:1px solid var(--bd);background:var(--bg)}
-.dov{position:absolute;inset:0;z-index:20;cursor:crosshair;display:none}
+.photo-blocks{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:16px;margin-top:14px;}
+.pblock{border-radius:var(--rs);overflow:hidden;border:1.5px solid var(--bd);box-shadow:var(--ss);}
+.pblock-hdr{padding:9px 14px;display:flex;align-items:center;gap:8px;background:var(--bg);border-bottom:1px solid var(--bd);}
+.pblock-label{flex:1;font-weight:700;font-size:.875rem;}
+.pblock-label-input{flex:1;font-family:'DM Sans',inherit;font-size:.875rem;font-weight:700;border:none;background:transparent;color:var(--tx);min-width:0;padding:0;}
+.pblock-label-input:focus{outline:none;}
+.pcanvas{position:relative;overflow:hidden;background:#EDE7DF;line-height:0;max-height:500px;}
+.pcanvas img.photo-img{width:100%;height:auto;display:block;pointer-events:none;user-select:none;}
+.pph{height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--t3);font-size:.8125rem;font-weight:500;}
+.pfooter{padding:8px 12px;display:flex;gap:7px;flex-wrap:wrap;border-top:1px solid var(--bd);background:var(--bg);}
+.dov{position:absolute;inset:0;z-index:20;cursor:crosshair;display:none;}
 
 /* ── SETUP RECTS ── */
-.srect{position:absolute;border:2.5px solid;border-radius:3px;cursor:pointer;overflow:visible}
-.srect:hover{box-shadow:0 0 0 3px rgba(255,255,255,.5)}
-.srect-lbl{position:absolute;top:calc(100% + 5px);left:50%;transform:translateX(-50%);color:#fff;font-size:.65rem;font-weight:800;padding:3px 9px;border-radius:20px;white-space:nowrap;pointer-events:none;letter-spacing:.2px;box-shadow:0 2px 8px rgba(0,0,0,.35);z-index:20}
-.srect-lbl::before{content:'';position:absolute;bottom:100%;left:50%;transform:translateX(-50%);border:4px solid transparent}
-.srect.prio-1 .srect-lbl{background:#e8530a}
-.srect.prio-1 .srect-lbl::before{border-bottom-color:#e8530a}
-.srect.prio-1{border-width:3px!important}
-.srect.prio-2 .srect-lbl{background:#1a58a8}
-.srect.prio-2 .srect-lbl::before{border-bottom-color:#1a58a8}
-.srect.prio-3 .srect-lbl{background:#7b3fb5}
-.srect.prio-3 .srect-lbl::before{border-bottom-color:#7b3fb5}
-.srect.prio-3{border-style:dashed!important;opacity:.85}
-.srect-del{position:absolute;top:3px;right:3px;font-size:.65rem;cursor:pointer;color:#fff;font-weight:800;opacity:0;background:rgba(0,0,0,.55);border-radius:3px;padding:2px 5px;line-height:1.5;z-index:5;transition:.12s}
-.srect:hover .srect-del{opacity:1}
-.rh{position:absolute;width:8px;height:8px;border:2px solid #fff;border-radius:2px;z-index:4}
+.srect{position:absolute;border:2.5px solid;border-radius:4px;cursor:pointer;overflow:visible;}
+.srect:hover{box-shadow:0 0 0 3px rgba(255,255,255,.5);}
+.srect-lbl{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);color:#fff;font-size:.78rem;font-weight:900;padding:4px 12px;border-radius:20px;white-space:nowrap;pointer-events:none;letter-spacing:.05px;box-shadow:0 3px 10px rgba(0,0,0,.35);z-index:20;border:2px solid rgba(255,255,255,.3);}
+.srect-lbl::before{content:'';position:absolute;bottom:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;}
+.srect.prio-1 .srect-lbl{background:var(--or);}
+.srect.prio-1 .srect-lbl::before{border-bottom-color:var(--or);}
+.srect.prio-2 .srect-lbl{background:var(--bl);}
+.srect.prio-2 .srect-lbl::before{border-bottom-color:var(--bl);}
+.srect.prio-3 .srect-lbl{background:var(--olive);opacity:.9;}
+.srect.prio-3 .srect-lbl::before{border-bottom-color:var(--olive);}
+.srect-del{position:absolute;top:3px;right:3px;font-size:.65rem;cursor:pointer;color:#fff;font-weight:800;opacity:0;background:rgba(0,0,0,.5);border-radius:3px;padding:2px 5px;line-height:1.5;z-index:5;transition:.12s;}
+.srect:hover .srect-del{opacity:1;}
+.rh{position:absolute;width:8px;height:8px;border:2px solid #fff;border-radius:2px;z-index:4;}
 .nw{top:-4px;left:-4px;cursor:nw-resize}.ne{top:-4px;right:-4px;cursor:ne-resize}
 .sw{bottom:-4px;left:-4px;cursor:sw-resize}.se{bottom:-4px;right:-4px;cursor:se-resize}
 
 /* ── MANUÁLY ── */
-.msel{font-family:inherit;font-size:.875rem;padding:8px 12px;border-radius:var(--rs);border:1.5px solid var(--bd);background:var(--bg);color:var(--tx);cursor:pointer;transition:.15s}
-.msel:focus{outline:none;border-color:var(--nv)}
-.mpage{background:var(--s);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;margin-bottom:14px}
-.mpage-hdr{background:var(--nv);color:#fff;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.mpage-logo{font-weight:800;font-size:.9375rem}
-.mpage-logo em{color:var(--or);font-style:normal}
-.mpage-body{padding:14px 18px}
+.msel{font-family:'DM Sans',inherit;font-size:.875rem;padding:9px 14px;border-radius:var(--rs);border:1.5px solid var(--bd);background:var(--s);color:var(--tx);cursor:pointer;transition:.15s;font-weight:500;}
+.msel:focus{outline:none;border-color:var(--nv);}
+.mpage{background:var(--s);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;margin-bottom:16px;}
+.mpage-hdr{background:var(--or);color:#fff;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.mpage-logo{font-weight:800;font-size:1rem;}
+.mpage-logo em{color:#FEF3DC;font-style:normal;font-family:'Playfair Display',serif;}
+.mpage-body{padding:18px 22px;}
 
 /* ── FORM ── */
-.fg{margin-bottom:13px}
-.lb{display:block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--t2);margin-bottom:5px}
-.fi,.fsl,.fta{width:100%;font-family:inherit;font-size:.9375rem;padding:9px 12px;border-radius:var(--rs);border:1.5px solid var(--bd);background:var(--bg);color:var(--tx);transition:.15s}
-.fi:focus,.fsl:focus,.fta:focus{outline:none;border-color:var(--nv);background:#fff}
-.fta{resize:vertical;min-height:60px}
-.hint{font-size:.75rem;color:var(--t3);margin-top:4px}
-.uz{display:block;width:100%;border:2px dashed var(--bd);border-radius:var(--rs);padding:14px;text-align:center;cursor:pointer;transition:.15s;background:var(--bg)}
-.uz:hover{border-color:var(--nv);background:#fff}
-.uz input{display:none}
-.uprev{width:100%;height:70px;object-fit:cover;border-radius:var(--rs);display:block;margin-top:5px}
+.fg{margin-bottom:14px;}
+.lb{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--t2);margin-bottom:5px;}
+.fi,.fsl,.fta{width:100%;font-family:'DM Sans',inherit;font-size:.9375rem;padding:10px 13px;border-radius:var(--rs);border:1.5px solid var(--bd);background:var(--bg);color:var(--tx);transition:.15s;}
+.fi:focus,.fsl:focus,.fta:focus{outline:none;border-color:var(--nv);background:#fff;box-shadow:0 0 0 3px rgba(73,28,10,.06);}
+.fta{resize:vertical;min-height:60px;}
+.hint{font-size:.75rem;color:var(--t3);margin-top:4px;}
+.uz{display:block;width:100%;border:2px dashed var(--bd);border-radius:var(--rs);padding:16px;text-align:center;cursor:pointer;transition:.15s;background:var(--bg);}
+.uz:hover{border-color:var(--nv);background:#fdfaf7;}
+.uz input{display:none;}
+.uprev{width:100%;height:72px;object-fit:cover;border-radius:var(--rs);display:block;margin-top:6px;}
 
 /* ── MODAL ── */
-.mov{display:none;position:fixed;inset:0;background:rgba(27,32,68,.52);backdrop-filter:blur(3px);z-index:1000;align-items:center;justify-content:center;padding:20px}
-.mov.open{display:flex}
-.modal{background:var(--s);border-radius:var(--r);box-shadow:0 28px 80px rgba(27,32,68,.28);width:100%;max-width:420px;max-height:90vh;overflow-y:auto;animation:mIn .18s ease}
+.mov{display:none;position:fixed;inset:0;background:rgba(73,28,10,.5);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+.mov.open{display:flex;}
+.modal{background:var(--s);border-radius:var(--r);box-shadow:0 28px 80px rgba(73,28,10,.25);width:100%;max-width:440px;max-height:90vh;overflow-y:auto;animation:mIn .18s ease;}
 @keyframes mIn{from{transform:scale(.95) translateY(8px);opacity:0}to{transform:none;opacity:1}}
-.mhd{padding:16px 20px 13px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center}
-.mtit{font-size:1rem;font-weight:800}
-.mbd{padding:16px 20px}
-.mft{padding:13px 20px 16px;border-top:1px solid var(--bd);display:flex;gap:8px;justify-content:flex-end}
+.mhd{padding:18px 22px 14px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;}
+.mtit{font-size:1.0625rem;font-weight:800;color:var(--tx);}
+.mbd{padding:18px 22px;}
+.mft{padding:14px 22px 18px;border-top:1px solid var(--bd);display:flex;gap:8px;justify-content:flex-end;}
 
 /* ── MISC ── */
-.slbl{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--t3);margin-bottom:7px}
-.empty{text-align:center;padding:40px 20px;color:var(--t3)}
-.empty-i{font-size:2rem;margin-bottom:10px;opacity:.4}
-.empty-t{font-size:.9375rem;font-weight:700;color:var(--t2);margin-bottom:4px}
-.empty-s{font-size:.8rem}
-.mb12{margin-bottom:12px}.mb16{margin-bottom:16px}
-.twrap-t{position:fixed;bottom:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:6px}
-.toast{background:var(--nv);color:#fff;padding:9px 14px;border-radius:8px;font-size:.875rem;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,.18);animation:tIn .2s ease}
-.toast.ok{background:var(--gn)}.toast.err{background:var(--rd)}
-@keyframes tIn{from{transform:translateY(6px) scale(.95);opacity:0}to{transform:none;opacity:1}}
-::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--bd);border-radius:3px}
+.slbl{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--t3);margin-bottom:8px;}
+.empty{text-align:center;padding:48px 20px;color:var(--t3);}
+.empty-i{font-size:2.25rem;margin-bottom:12px;opacity:.35;}
+.empty-t{font-size:.9375rem;font-weight:700;color:var(--t2);margin-bottom:4px;}
+.empty-s{font-size:.8rem;}
+.mb12{margin-bottom:12px;}.mb16{margin-bottom:16px;}
+.twrap-t{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:7px;}
+.toast{background:var(--tx);color:#fff;padding:10px 16px;border-radius:10px;font-size:.875rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.18);animation:tIn .2s ease;max-width:320px;}
+.toast.ok{background:var(--olive);}.toast.err{background:var(--rd);}
+@keyframes tIn{from{transform:translateY(8px) scale(.95);opacity:0}to{transform:none;opacity:1}}
+::-webkit-scrollbar{width:5px;height:5px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:var(--bd);border-radius:4px;}
 
 /* ── PRINT ── */
 @media print{
@@ -193,12 +229,57 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
   body.print-zasob .btn,.fcard-vis-strip button{display:none!important}
 }
 @media(max-width:600px){main{padding:12px}header{padding:0 12px}}
+
+/* ── SIDEBAR ── */
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:230px;background:#fff;border-right:1px solid var(--bd);display:flex;flex-direction:column;z-index:200}
+.sb-logo{padding:20px 20px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--bd)}
+.sb-logo .logo-mark{width:34px;height:34px;border-radius:9px;background:var(--or);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(217,80,42,.25)}
+.sb-brand{line-height:1.2}
+.sb-brand strong{font-size:.9rem;font-weight:800;color:var(--tx);display:block;font-family:'Playfair Display',serif}
+.sb-brand span{font-size:.6rem;color:var(--t3);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.sb-nav{padding:12px 10px;flex:1;overflow-y:auto}
+.sb-nav button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:none;color:var(--t2);font-family:'DM Sans',inherit;font-size:.875rem;font-weight:600;padding:10px 13px;border-radius:9px;cursor:pointer;transition:.15s;white-space:nowrap;margin-bottom:2px}
+.sb-nav button:hover{background:var(--bg);color:var(--tx)}
+.sb-nav button.active{background:rgba(217,80,42,.1);color:var(--or);font-weight:700}
+.sb-nav button svg{flex-shrink:0;opacity:.6}
+.sb-nav button.active svg{opacity:1}
+.sb-bottom{padding:14px 16px;border-top:1px solid var(--bd);display:flex;align-items:center;gap:10px}
+.sb-avatar{width:32px;height:32px;border-radius:50%;background:var(--or);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;flex-shrink:0}
+.sb-user strong{display:block;font-size:.8rem;font-weight:700;color:var(--tx)}
+.sb-user span{font-size:.7rem;color:var(--t3)}
+header{margin-left:230px;height:52px;background:#fff;border-bottom:1px solid var(--bd);box-shadow:0 1px 0 var(--bd)}
+header nav,.logo{display:none!important}
+main{margin-left:230px;padding:28px 32px}
+@media(max-width:800px){.sidebar{display:none}header,.main{margin-left:0}header nav,.logo{display:flex!important}}
+@media print{.sidebar{display:none!important}header{margin-left:0!important}main{margin-left:0!important}header nav,.logo{display:none!important}}
 </style>
 </head>
 <body>
 
+<aside class="sidebar no-print">
+  <div class="sb-logo">
+    <div class="logo-mark"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1.5" fill="rgba(255,255,255,.9)"/><rect x="9" y="1" width="6" height="6" rx="1.5" fill="rgba(255,255,255,.55)"/><rect x="1" y="9" width="6" height="6" rx="1.5" fill="rgba(255,255,255,.55)"/><rect x="9" y="9" width="6" height="6" rx="1.5" fill="rgba(255,255,255,.9)"/></svg></div>
+    <div class="sb-brand"><strong>Libeřské lahůdky</strong><span>POS Manager</span></div>
+  </div>
+  <div class="sb-nav">
+    <button class="active" data-tab="kampane"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Kampaně</button>
+    <button data-tab="nastaveni"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>Nastavení prodejen</button>
+    <button data-tab="prirazeni"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 16 12 14 15 10 9 8 12 2 12"/></svg>Přiřazení vizuálů</button>
+    <button data-tab="prodejna"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Průkaz prodejny</button>
+    <button data-tab="zasob"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Sklad</button>
+    <button data-tab="manualy"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Manuály</button>
+  </div>
+  <div class="sb-bottom">
+    <div class="sb-avatar">LL</div>
+    <div class="sb-user"><strong>Marketing</strong><span>centrála</span></div>
+  </div>
+</aside>
+
 <header>
-  <div class="logo">LL <em>POS</em></div>
+  <div class="logo">
+    <div class="logo-mark"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1.5" fill="rgba(255,255,255,.9)"/><rect x="9" y="1" width="6" height="6" rx="1.5" fill="rgba(255,255,255,.55)"/><rect x="1" y="9" width="6" height="6" rx="1.5" fill="rgba(255,255,255,.55)"/><rect x="9" y="9" width="6" height="6" rx="1.5" fill="rgba(255,255,255,.9)"/></svg></div>
+    <div><em>Libeřské lahůdky</em> <span>POS Manager</span></div>
+  </div>
   <nav>
     <button class="active" data-tab="kampane">Kampaně</button>
     <button data-tab="nastaveni">Nastavení prodejen</button>
@@ -207,8 +288,9 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
     <button data-tab="zasob">Sklad</button>
     <button data-tab="manualy">Manuály</button>
   </nav>
+  <div id="pg-title" style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:var(--tx);flex:1">Kampaně</div>
   <div class="ha no-print">
-    <span id="sync-badge" style="font-size:.75rem;color:rgba(255,255,255,.6);padding:4px 10px;transition:opacity .4s;opacity:0;white-space:nowrap"></span>
+    <span id="sync-badge" style="font-size:.72rem;padding:4px 10px;background:var(--bg);border-radius:20px;color:var(--t2);transition:opacity .4s;opacity:0;white-space:nowrap"></span>
     <button class="bh" onclick="setupToken()" id="gh-btn">⚙ GitHub</button>
     <button class="bh" onclick="exportD()">↓ Export</button>
     <label class="bh" style="cursor:pointer">↑ Import<input type="file" accept=".json" style="display:none" onchange="importD(this)"></label>
@@ -230,6 +312,7 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
 <div id="tab-nastaveni" class="tab">
   <div class="ph">
     <div><div class="ph-t">Nastavení prodejen</div><div class="ph-s">Nahraj fotky · Nakresli rámy · Hotovo navždy</div></div>
+    <button class="btn bp no-print" onclick="addStore()">+ Nová prodejna</button>
   </div>
   <div id="acc-list"></div>
 </div>
@@ -243,12 +326,12 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
   <!-- CAMPAIGN PICKER — big cards -->
   <div id="camp-picker" class="no-print" style="margin-bottom:20px"></div>
   <!-- PRIORITY FILTER -->
-  <div id="prio-filter" class="no-print" style="display:none;margin-bottom:16px;display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+  <div id="prio-filter" class="no-print" style="display:none;margin-bottom:16px;gap:6px;align-items:center;flex-wrap:wrap">
     <span style="font-size:.8rem;font-weight:700;color:var(--t2)">Zobrazit:</span>
     <button onclick="setPrioFilter(null)" id="pf-all" class="btn bp bsm">Vše</button>
-    <button onclick="setPrioFilter('1')" id="pf-1" class="btn bs bsm" style="border-color:#e8530a;color:#e8530a">① Hlavní</button>
-    <button onclick="setPrioFilter('2')" id="pf-2" class="btn bs bsm" style="border-color:#1a58a8;color:#1a58a8">② Vedlejší</button>
-    <button onclick="setPrioFilter('3')" id="pf-3" class="btn bs bsm" style="border-color:#7b3fb5;color:#7b3fb5">③ Doplňkový</button>
+    <button onclick="setPrioFilter('1')" id="pf-1" class="btn bs bsm" style="border-color:#D9502A;color:#D9502A">① Hlavní</button>
+    <button onclick="setPrioFilter('2')" id="pf-2" class="btn bs bsm" style="border-color:#1A5A8A;color:#1A5A8A">② Vedlejší</button>
+    <button onclick="setPrioFilter('3')" id="pf-3" class="btn bs bsm" style="border-color:#474B30;color:#474B30">③ Doplňkový</button>
     <span id="pf-count" style="font-size:.8rem;color:var(--t3);margin-left:4px"></span>
   </div>
   <!-- FRAMES GRID — always visible -->
@@ -274,8 +357,12 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
 <div id="tab-zasob" class="tab">
   <div class="ph">
     <div><div class="ph-t">Sklad</div><div class="ph-s">Co je kde — centrála vs. prodejny</div></div>
-    <button class="btn bp no-print" onclick="printZasob()">🖨 Tisknout přehled</button>
+    <div style="display:flex;gap:8px">
+      <button class="btn bs no-print" onclick="showRozesilka()">📦 Rozesílka</button>
+      <button class="btn bp no-print" onclick="printZasob()">🖨 Tisknout přehled</button>
+    </div>
   </div>
+  <div id="rozesilka-panel" style="display:none;margin-bottom:24px"></div>
   <div id="zasob-content"></div>
 </div>
 
@@ -333,8 +420,8 @@ main{max-width:1280px;margin:0 auto;padding:26px 22px}
 'use strict';
 const SK='llpos_v13';
 const FTC={
-  led_out:{label:'LED ext',bg:'#1a58a8'},led_in:{label:'LED int',bg:'#7b3fb5'},
-  wall:{label:'Stěna',bg:'#5c6182'},klapram:{label:'Klaprám',bg:'#a66000'},stojan:{label:'Stojan',bg:'#1c7a42'}
+  led_out:{label:'LED ext',bg:'#1A5A8A'},led_in:{label:'LED int',bg:'#474B30'},
+  wall:{label:'Stěna',bg:'#7A6055'},klapram:{label:'Klaprám',bg:'#C8810C'},stojan:{label:'Stojan',bg:'#3E7A30'}
 };
 
 // ── STORE DATA ────────────────────────────────────────────────────────────────
@@ -381,9 +468,9 @@ function setPrioFilter(val){
     const isActive=(val===null&&k==='all')||(val===k);
     btn.className=isActive?'btn bp bsm':'btn bs bsm';
     if(!isActive){
-      if(k==='1')btn.style.cssText='border-color:#e8530a;color:#e8530a';
-      else if(k==='2')btn.style.cssText='border-color:#1a58a8;color:#1a58a8';
-      else if(k==='3')btn.style.cssText='border-color:#7b3fb5;color:#7b3fb5';
+      if(k==='1')btn.style.cssText='border-color:#D9502A;color:#D9502A';
+      else if(k==='2')btn.style.cssText='border-color:#1A5A8A;color:#1A5A8A';
+      else if(k==='3')btn.style.cssText='border-color:#474B30;color:#474B30';
       else btn.style.cssText='';
     } else btn.style.cssText='';
   });
@@ -589,7 +676,7 @@ async function init(){
     updateGhBtn();
   }
   await load();
-  document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+  document.querySelectorAll('nav button,.sb-nav button').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
   switchTab('kampane');
   // Auto-sync každých 30s
   startAutoSync();
@@ -630,10 +717,12 @@ function startAutoSync(){
   },30000);
 }
 
+const TAB_TITLES={kampane:'Kampaně',nastaveni:'Nastavení prodejen',prirazeni:'Přiřazení vizuálů',prodejna:'Průkaz prodejny',zasob:'Sklad',manualy:'Manuály'};
 function switchTab(tab){
   document.querySelectorAll('.tab').forEach(p=>p.classList.remove('active'));
   document.getElementById('tab-'+tab).classList.add('active');
-  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+  document.querySelectorAll('nav button,.sb-nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+  const pt=document.getElementById('pg-title');if(pt)pt.textContent=TAB_TITLES[tab]||'';
   if(tab==='kampane')renderCamps();
   if(tab==='nastaveni')renderSetup();
   if(tab==='prirazeni')renderAssign();
@@ -656,14 +745,14 @@ function campStatus(c){
   const from=c.dateFrom?new Date(c.dateFrom):null;
   const to=c.dateTo?new Date(c.dateTo):null;
   if(from&&to){
-    if(now<from) return{label:'Připravuje se',col:'#5c6182',bg:'#ebebf5',icon:'⏳'};
+    if(now<from) return{label:'Připravuje se',col:'#7A6055',bg:'#F0EBE5',icon:'⏳'};
     if(now>to) return{label:'Ukončeno',col:'var(--t3)',bg:'var(--bg)',icon:'✓'};
     const daysLeft=Math.round((to-now)/(1000*60*60*24));
     if(daysLeft<=7) return{label:`Končí za ${daysLeft}d`,col:daysLeft<=3?'var(--rd)':'var(--am)',bg:daysLeft<=3?'var(--rbg)':'var(--abg)',icon:'⚠'};
     return{label:'Aktivní',col:'var(--gn)',bg:'var(--gbg)',icon:'●'};
   }
   if(from&&now>=from) return{label:'Aktivní',col:'var(--gn)',bg:'var(--gbg)',icon:'●'};
-  if(from&&now<from) return{label:'Připravuje se',col:'#5c6182',bg:'#ebebf5',icon:'⏳'};
+  if(from&&now<from) return{label:'Připravuje se',col:'#7A6055',bg:'#F0EBE5',icon:'⏳'};
   return{label:'Bez termínu',col:'var(--t3)',bg:'var(--bg)',icon:'○'};
 }
 
@@ -817,9 +906,11 @@ function renderSetup(){
     const open=expandedStores.has(st.id);
     return`<div class="acc ${totalR?'has-frames':''} ${open?'open':''}" id="acc-${st.id}">
       <div class="acc-hdr" onclick="toggleAcc('${st.id}')">
-        <div class="acc-num">${st.num}</div>
+        <div class="acc-num" onclick="event.stopPropagation();editStoreNum('${st.id}')" title="Klikni pro změnu čísla" style="cursor:pointer">${st.num}</div>
         <div class="acc-name">${esc(st.name)}</div>
         <div class="acc-info">${st.photos.length} fotek · ${totalR} rámů</div>
+        <button class="bi no-print" onclick="event.stopPropagation();editStoreName('${st.id}')" title="Přejmenovat" style="font-size:.7rem">✏</button>
+        <button class="bi no-print" onclick="event.stopPropagation();delStore('${st.id}')" title="Smazat prodejnu" style="font-size:.7rem;color:var(--rd)">🗑</button>
         <div class="acc-arrow">▼</div>
       </div>
       <div class="acc-body" id="accb-${st.id}">${open?buildSetupBody(st):''}</div>
@@ -840,6 +931,44 @@ function toggleAcc(sid){
     document.getElementById('accb-'+sid).innerHTML=buildSetupBody(st);
     setTimeout(()=>st.photos.forEach(ph=>bindAllRects(st.id,ph.id)),0);
   }
+}
+
+function editStoreNum(sid){
+  const st=S.stores.find(s=>s.id===sid);if(!st)return;
+  const n=prompt('Nové číslo prodejny:',st.num);
+  if(n===null)return;
+  const num=parseInt(n);
+  if(!num||num<1){toast('Zadej platné číslo','err');return;}
+  if(S.stores.some(s=>s.id!==sid&&s.num===num)){toast('Toto číslo už má jiná prodejna','err');return;}
+  st.num=num;save();renderSetup();toast('Číslo změněno');
+}
+
+function editStoreName(sid){
+  const st=S.stores.find(s=>s.id===sid);if(!st)return;
+  const n=prompt('Nový název prodejny:',st.name);
+  if(n===null||!n.trim())return;
+  st.name=n.trim();save();renderSetup();toast('Název změněn');
+}
+
+function delStore(sid){
+  const st=S.stores.find(s=>s.id===sid);if(!st)return;
+  const totalR=st.photos.reduce((a,ph)=>a+(ph.rects||[]).length,0);
+  const msg=totalR
+    ?`Smazat prodejnu "${st.name}"? Má ${totalR} rámů a ${st.photos.length} fotek — vše bude odstraněno!`
+    :`Smazat prodejnu "${st.name}"?`;
+  if(!confirm(msg))return;
+  S.stores=S.stores.filter(s=>s.id!==sid);
+  expandedStores.delete(sid);
+  save();renderSetup();toast('Prodejna smazána');
+}
+
+function addStore(){
+  const name=prompt('Název nové prodejny:');
+  if(!name||!name.trim())return;
+  const maxNum=S.stores.reduce((a,s)=>Math.max(a,s.num),0);
+  const num=maxNum+1;
+  S.stores.push({id:'s'+String(num).padStart(2,'0'),num,name:name.trim(),tags:{zmrz:false,tv:0,kiosek:false,vyrobna:false},photos:[]});
+  save();renderSetup();toast('Prodejna přidána');
 }
 
 function buildSetupBody(st){
@@ -893,13 +1022,15 @@ function buildPhotoBlock(st,ph){
     </div>
     <!-- frame list -->
     ${rects.length?`<div style="padding:6px 12px 10px;display:flex;flex-direction:column;gap:5px">
-      ${rects.map(r=>{const ft=FTC[r.type]||FTC.led_out;return`<div style="display:flex;align-items:center;gap:7px;padding:5px 9px;background:var(--bg);border-radius:var(--rs);border:1.5px solid var(--bd);flex-wrap:wrap">
+      ${rects.map(r=>{
+        const ft=FTC[r.type]||FTC.led_out;
+        return`<div style="display:flex;align-items:center;gap:7px;padding:5px 9px;background:var(--bg);border-radius:var(--rs);border:1.5px solid var(--bd);flex-wrap:wrap">
         <span style="width:10px;height:10px;border-radius:2px;background:${ft.bg};flex-shrink:0"></span>
-        <input style="border:none;background:transparent;font-family:inherit;font-size:.875rem;font-weight:600;flex:1;color:var(--tx);min-width:80px" value="${esc(r.label||ft.label)}" onchange="updRL('${sid}','${phid}','${r.id}',this.value)">
+        <input style="border:none;background:transparent;font-family:inherit;font-size:.875rem;font-weight:600;flex:1;color:var(--tx);min-width:80px" value="${esc(r.label||ft.label)}" onchange="updRL('${sid}','${phid}','${r.id}',this.value)" placeholder="Stejný název = propojený rám">
         <select style="border:none;background:transparent;font-family:inherit;font-size:.75rem;color:var(--t2);cursor:pointer" onchange="updRT('${sid}','${phid}','${r.id}',this.value)">
           ${Object.entries(FTC).map(([k,v])=>`<option value="${k}"${r.type===k?' selected':''}>${v.label}</option>`).join('')}
         </select>
-        <select style="border:none;background:transparent;font-family:inherit;font-size:.8rem;font-weight:700;cursor:pointer;color:${r.priority==='1'?'#e8530a':r.priority==='3'?'#9ea3be':'#1a58a8'}" onchange="updRP('${sid}','${phid}','${r.id}',this.value)" title="Priorita místa">
+        <select style="border:none;background:transparent;font-family:inherit;font-size:.8rem;font-weight:700;cursor:pointer;color:${r.priority==='1'?'#D9502A':r.priority==='3'?'#474B30':'#1A5A8A'}" onchange="updRP('${sid}','${phid}','${r.id}',this.value)" title="Priorita">
           <option value="1"${(!r.priority||r.priority==='1'||r.priority==='hlavni')?' selected':''}>① Hlavní</option>
           <option value="2"${(r.priority==='2'||r.priority==='standard')?' selected':''}>② Vedlejší</option>
           <option value="3"${(r.priority==='3'||r.priority==='doplnkovy')?' selected':''}>③ Doplňkový</option>
@@ -916,7 +1047,7 @@ function buildSRect(sid,phid,r){
   const pMap={hlavni:'1',standard:'2',doplnkovy:'3'};
   const prio=pMap[r.priority]||r.priority||'2';
   const prioLabel={1:'①',2:'②',3:'③'}[prio]||'②';
-  const borderStyle=prio==='1'?`border:3px solid ${ft.bg}`:prio==='3'?`border:2px dashed ${ft.bg}88`:`border:2.5px solid ${ft.bg}`;
+  const borderStyle=prio==='1'?`border:3px solid #D9502A;box-shadow:inset 0 0 0 1px rgba(217,80,42,.2)`:prio==='3'?`border:2px dashed #474B30`:prio==='2'?`border:2.5px solid #1A5A8A`:`border:2.5px solid ${ft.bg}`;
   return`<div class="srect prio-${prio}" id="sr-${r.id}" style="left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%;${borderStyle}">
     <div class="srect-lbl">${prioLabel} ${esc(r.label||ft.label)}</div>
     <div class="srect-del" onclick="delR('${sid}','${phid}','${r.id}')">✕</div>
@@ -966,9 +1097,9 @@ function updRP(sid,phid,rid,val){
   if(el){
     const ft=FTC[r.type]||FTC.led_out;
     el.className='srect prio-'+val;
-    if(val==='1')el.style.border=`3px solid ${ft.bg}`;
-    else if(val==='3')el.style.border=`2px dashed ${ft.bg}88`;
-    else el.style.border=`2.5px solid ${ft.bg}`;
+    if(val==='1')el.style.border=`3px solid #D9502A`;
+    else if(val==='3')el.style.border=`2px dashed #474B30`;
+    else el.style.border=`2.5px solid #1A5A8A`;
     const lbl=el.querySelector('.srect-lbl');
     const prioLabel={'1':'①','2':'②','3':'③'}[val]||'②';
     if(lbl)lbl.textContent=prioLabel+' '+esc(r.label||ft.label);
@@ -977,7 +1108,30 @@ function updRP(sid,phid,rid,val){
 function updRL(sid,phid,rid,val){
   const st=S.stores.find(s=>s.id===sid);if(!st)return;
   const ph=st.photos.find(p=>p.id===phid);if(!ph)return;
-  const r=(ph.rects||[]).find(x=>x.id===rid);if(r){r.type=val;save();const ft=FTC[val]||FTC.led_out;const el=document.getElementById('sr-'+rid);if(el){el.style.borderColor=ft.bg;const lb=el.querySelector('.srect-lbl');if(lb){lb.style.background=ft.bg+'cc';lb.textContent=r.label||ft.label;}}}
+  const r=(ph.rects||[]).find(x=>x.id===rid);if(!r)return;
+  r.label=val.trim();save();
+  // Update bubble on photo
+  const el=document.getElementById('sr-'+rid);
+  if(el){
+    const lb=el.querySelector('.srect-lbl');
+    const prio=r.priority||'2';
+    const prioEmoji={'1':'🔴','2':'🔵','3':'⚪'}[prio]||'🔵';
+    if(lb)lb.textContent=prioEmoji+' '+(r.label||FTC[r.type]?.label||'Rám');
+  }
+}
+function updRT(sid,phid,rid,val){
+  const st=S.stores.find(s=>s.id===sid);if(!st)return;
+  const ph=st.photos.find(p=>p.id===phid);if(!ph)return;
+  const r=(ph.rects||[]).find(x=>x.id===rid);if(!r)return;
+  r.type=val;save();
+  const ft=FTC[val]||FTC.led_out;
+  const el=document.getElementById('sr-'+rid);
+  if(el){
+    const bw=r.priority==='1'?'4px':r.priority==='3'?'2px':'3px';
+    const bs=r.priority==='3'?'dashed':'solid';
+    el.style.border=bw+' '+bs+' '+ft.bg;
+    const lb=el.querySelector('.srect-lbl');if(lb)lb.style.background=ft.bg;
+  }
 }
 function delR(sid,phid,rid){
   const st=S.stores.find(s=>s.id===sid);if(!st)return;
@@ -1099,6 +1253,7 @@ function renderCampPicker(){
 
 function selCamp(cid){
   activeCampId=activeCampId===cid?null:cid;
+  if(!activeCampId)prioFilter=null; // reset filter when no campaign
   renderCampPicker();
   renderAssignGrid();
   const pi=document.getElementById('pool-info');if(pi)pi.innerHTML='';
@@ -1109,111 +1264,134 @@ function renderAssignGrid(){
   const allF=allFrames();
   if(!allF.length){grid.innerHTML=`<div class="empty"><div class="empty-i">⬜</div><div class="empty-t">Žádné rámy</div><div class="empty-s">Jdi na Nastavení prodejen → nahraj fotky → nakresli rámy</div></div>`;return;}
 
-  // Show/update filter bar
   const pf=document.getElementById('prio-filter');
   if(pf)pf.style.display=activeCampId?'flex':'none';
 
-  // Normalize priority (migrate old names)
   const pMap={hlavni:'1',standard:'2',doplnkovy:'3'};
   allF.forEach(f=>{if(pMap[f.rect.priority])f.rect.priority=pMap[f.rect.priority];if(!f.rect.priority)f.rect.priority='2';});
 
-  // Apply priority filter
-  const frames=prioFilter?allF.filter(f=>f.rect.priority===prioFilter):allF;
-
-  // Update count
-  const pfc=document.getElementById('pf-count');
-  if(pfc&&prioFilter)pfc.textContent=`${frames.length} rámů`;
-  else if(pfc)pfc.textContent='';
-
   const activeCamp=activeCampId?S.campaigns.find(c=>c.id===activeCampId):null;
 
-  // group by store
-  const byStore={};
-  frames.forEach(f=>{if(!byStore[f.store.id])byStore[f.store.id]={store:f.store,frames:[]};byStore[f.store.id].frames.push(f);});
-
-  const storeBlocks=Object.values(byStore).map(({store,frames:sf})=>{
-    const asgn=activeCampId?sf.filter(f=>f.rect.campaignId===activeCampId).length:sf.filter(f=>f.rect.campaignId).length;
-    const total=sf.length;
-    // tags
-    const tgs=store.tags||{};
+  // Build per store, per photo
+  const storeBlocks=S.stores.filter(st=>st.photos.some(ph=>(ph.rects||[]).length>0)).map(st=>{
+    const tgs=st.tags||{};
     const tagHtml=[];
-    if(tgs.zmrz) tagHtml.push(`<span style="font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:4px;background:#fce4f3;color:#8b1a6e">🍦 Zmrzlina</span>`);
-    if(tgs.tv>0) tagHtml.push(`<span style="font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:4px;background:var(--blbg);color:var(--bl)">📺 TV ×${tgs.tv}</span>`);
-    if(tgs.kiosek) tagHtml.push(`<span style="font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:4px;background:var(--bg);color:var(--t2)">Kiosek</span>`);
-    if(!tgs.vyrobna) tagHtml.push(`<span style="font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:4px;background:var(--bg);color:var(--t3)">bez výrobny</span>`);
+    if(tgs.zmrz)tagHtml.push(`<span style="font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:4px;background:#fce4f3;color:#8b1a6e">🍦 Zmrzlina</span>`);
+    if(tgs.tv>0)tagHtml.push(`<span style="font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:4px;background:var(--blbg);color:var(--bl)">📺 TV ×${tgs.tv}</span>`);
+
+    const totalRects=st.photos.reduce((a,ph)=>a+(ph.rects||[]).length,0);
+    const assignedRects=st.photos.reduce((a,ph)=>a+(ph.rects||[]).filter(r=>r.campaignId).length,0);
+
+    // Photos with frames
+    const photosHtml=st.photos.filter(ph=>(ph.rects||[]).length>0&&ph.src).map(ph=>{
+      const rects=ph.rects||[];
+      const filteredRects=prioFilter?rects.filter(r=>(pMap[r.priority]||r.priority||'2')===prioFilter):rects;
+      if(!filteredRects.length)return'';
+
+      const phLbl=(ph.label||'').toLowerCase();
+      const isExt=phLbl.includes('ext')||phLbl.includes('zven')||phLbl.includes('venk');
+      const isInt=phLbl.includes('int')||phLbl.includes('uvnit')||phLbl.includes('vnitr');
+      const locBg=isExt?'#dceef8':isInt?'#f3e8f9':'var(--bg)';
+      const locCol=isExt?'#1a5a8a':isInt?'#7b3fb5':'var(--t2)';
+      const locIcon=isExt?'🌤':'🏠';
+
+      // Build frame list with large visual previews
+      const frameList=filteredRects.map(r=>{
+        const ft=FTC[r.type]||FTC.led_out;
+        const camp=r.campaignId?S.campaigns.find(c=>c.id===r.campaignId):null;
+        const isActive=activeCampId&&r.campaignId===activeCampId;
+        const isOther=r.campaignId&&r.campaignId!==activeCampId;
+        const prioKey=pMap[r.priority]||r.priority||'2';
+        const prioEmoji={'1':'🔴','2':'🔵','3':'⚪'}[prioKey]||'🔵';
+        const cursor=activeCampId?'pointer':'default';
+
+        return`<div style="display:flex;gap:12px;padding:10px 12px;border-radius:10px;border:2px solid ${camp?ft.bg:'var(--bd)'};border-left:6px solid ${ft.bg};background:${camp?ft.bg+'08':'var(--s)'};transition:.15s">
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap">
+              <span style="font-size:.65rem;font-weight:800;padding:2px 7px;border-radius:4px;background:${ft.bg};color:#fff">${ft.label}</span>
+              <span style="font-size:.75rem">${prioEmoji}</span>
+            </div>
+            <div style="font-weight:800;font-size:.9375rem;margin-bottom:2px">${esc(r.label||ft.label)}</div>
+            <div style="font-size:.8rem;color:${camp?ft.bg:'var(--t3)'};font-weight:${camp?'700':'500'}">${camp?'✓ '+esc(camp.name):'prázdné — klikni'}</div>
+          </div>
+          ${camp?.photo
+            ?`<div style="flex-shrink:0;width:64px;height:90px;border-radius:8px;overflow:hidden;border:2px solid ${ft.bg};background:var(--bg)">
+                <img src="${camp.photo}" style="width:100%;height:100%;object-fit:contain;display:block">
+              </div>`
+            :`<div style="flex-shrink:0;width:64px;height:90px;border-radius:8px;border:2px dashed var(--bd);background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:1.25rem;opacity:.2">🎨</div>`}
+        </div>`;
+      }).join('');
+
+      // Photo with clickable rects - THIS is where you click to assign
+      const photoRects=filteredRects.map(r=>{
+        const ft=FTC[r.type]||FTC.led_out;
+        const camp=r.campaignId?S.campaigns.find(c=>c.id===r.campaignId):null;
+        const prioKey=pMap[r.priority]||r.priority||'2';
+        const borderW=prioKey==='1'?'4px':prioKey==='3'?'2px':'3px';
+        const borderStyle=prioKey==='3'?'dashed':'solid';
+        const prioEmoji={'1':'🔴','2':'🔵','3':'⚪'}[prioKey]||'🔵';
+        return`<div onclick="event.stopPropagation();toggleAssign('${st.id}','${ph.id}','${r.id}')" style="position:absolute;left:${r.x}%;top:${r.y}%;width:${r.w}%;height:${r.h}%;border:${borderW} ${borderStyle} ${ft.bg};border-radius:4px;overflow:hidden;cursor:pointer;transition:.15s;${camp?'background:'+ft.bg+'22;box-shadow:0 0 0 2px '+ft.bg+'44':'background:rgba(255,255,255,.15)'}" onmouseenter="this.style.transform='scale(1.03)'" onmouseleave="this.style.transform=''">
+          ${camp?.photo?`<img src="${camp.photo}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.8;pointer-events:none">`:''}
+          <div style="position:absolute;bottom:calc(100% + 3px);left:50%;transform:translateX(-50%);background:${ft.bg};color:#fff;font-size:.6rem;font-weight:800;padding:3px 9px;border-radius:10px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.35);pointer-events:none;z-index:5">${prioEmoji} ${esc(r.label||ft.label)}</div>
+        </div>`;
+      }).join('');
+
+      return`<div style="margin-bottom:18px">
+        <div style="font-size:.75rem;font-weight:700;color:${locCol};margin-bottom:8px;display:flex;align-items:center;gap:6px">
+          <span style="padding:3px 10px;border-radius:6px;background:${locBg};font-weight:800;font-size:.8rem">${locIcon} ${esc(ph.label||'Fotka')}</span>
+          <span style="color:var(--t3);font-weight:500">${filteredRects.length} rámů</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 280px;gap:16px;align-items:start">
+          <!-- FOTKA s rámy -->
+          <div style="position:relative;border-radius:10px;overflow:visible;border:2px solid var(--bd);background:var(--bg);line-height:0;padding-top:24px">
+            <img src="${ph.src}" style="width:100%;height:auto;display:block;border-radius:0 0 8px 8px;pointer-events:none">
+            ${photoRects}
+          </div>
+          <!-- SEZNAM RÁMŮ s vizuály -->
+          <div style="display:flex;flex-direction:column;gap:8px">
+            ${frameList}
+          </div>
+        </div>
+      </div>`;
+    }).filter(Boolean).join('');
+
+    if(!photosHtml)return'';
+
     return`<div class="assign-store-section">
       <div class="assign-store-hdr">
-        <div class="store-num">${store.num}</div>
-        <div class="store-nm">${esc(store.name)}</div>
+        <div class="store-num">${st.num}</div>
+        <div class="store-nm">${esc(st.name)}</div>
         ${tagHtml.length?`<div style="display:flex;gap:5px;flex-wrap:wrap;margin-left:4px">${tagHtml.join('')}</div>`:''}
-        <div class="store-prog">${asgn}/${total}</div>
+        <div class="store-prog">${assignedRects}/${totalRects}</div>
       </div>
-      <div class="frames-grid">${[...sf].sort((a,b)=>{const pMap={hlavni:'1',standard:'2',doplnkovy:'3'};const pa=pMap[a.rect.priority]||a.rect.priority||'2';const pb=pMap[b.rect.priority]||b.rect.priority||'2';return pa.localeCompare(pb);}).map(({store:st,photo,rect})=>buildFCard(st,photo,rect)).join('')}</div>
+      <div>${photosHtml}</div>
     </div>`;
-  }).join('');
+  }).filter(Boolean).join('');
 
-  // Campaign preview panel — shown when active
-  const previewHtml=activeCamp?`<div style="position:sticky;bottom:20px;z-index:50;margin-top:24px;background:var(--nv);border-radius:var(--r);padding:14px 18px;display:flex;align-items:center;gap:16px;box-shadow:0 8px 32px rgba(27,32,68,.3)">
+  // Sticky preview
+  const previewHtml=activeCamp?`<div style="position:sticky;bottom:20px;z-index:50;margin-top:24px;background:var(--nv);border-radius:var(--r);padding:14px 18px;display:flex;align-items:center;gap:16px;box-shadow:0 8px 32px rgba(0,0,0,.3)">
     <div style="font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:rgba(255,255,255,.5);flex-shrink:0">Nabito</div>
     ${activeCamp.photo?`<img src="${activeCamp.photo}" style="height:80px;width:auto;max-width:80px;object-fit:contain;border-radius:8px;border:2px solid rgba(255,255,255,.2);flex-shrink:0">`:''}
     <div style="flex:1;min-width:0">
       <div style="font-weight:800;color:#fff;font-size:1rem;margin-bottom:3px">${esc(activeCamp.name)}</div>
-      <div style="font-size:.8125rem;color:rgba(255,255,255,.55)">Klikej na rámy níže</div>
+      <div style="font-size:.8125rem;color:rgba(255,255,255,.55)">Klikej na rámy na fotkách</div>
     </div>
     ${(()=>{const p=pool(activeCampId);return`<div style="text-align:center;flex-shrink:0"><div style="font-size:1.625rem;font-weight:800;color:var(--or);line-height:1">${p.avail}</div><div style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:rgba(255,255,255,.4)">Zbývá</div></div>`;})()}
     <button onclick="selCamp(null)" style="background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.6);padding:7px 12px;border-radius:var(--rs);font-family:inherit;font-size:.8125rem;font-weight:600;cursor:pointer;flex-shrink:0">✕ Odložit</button>
   </div>`:'';
 
-  grid.innerHTML=storeBlocks+previewHtml;
-}
-
-const PCFG={
-  '1':{label:'① Hlavní',col:'#e8530a',border:'3px solid #e8530a',shadow:'rgba(232,83,10,.2)'},
-  '2':{label:'② Vedlejší',col:'#1a58a8',border:'2.5px solid #1a58a8',shadow:'rgba(26,88,168,.15)'},
-  '3':{label:'③ Doplňkový',col:'#7b3fb5',border:'2px dashed #7b3fb5',shadow:''}
-};
-
-function buildFCard(st,photo,rect){
-  const ft=FTC[rect.type]||FTC.led_out;
-  const isActive=activeCampId&&rect.campaignId===activeCampId;
-  const isOther=rect.campaignId&&rect.campaignId!==activeCampId;
-  const otherCamp=isOther?S.campaigns.find(c=>c.id===rect.campaignId):null;
-  const activeCamp=activeCampId?S.campaigns.find(c=>c.id===activeCampId):null;
-  const shownCamp=isActive?activeCamp:isOther?otherCamp:null;
-  // Normalize priority
-  const pMap={hlavni:'1',standard:'2',doplnkovy:'3'};
-  const prioKey=pMap[rect.priority]||rect.priority||'2';
-  const pc=PCFG[prioKey]||PCFG['2'];
-  let cls='fcard';
-  if(isActive)cls+=' assigned';else if(isOther)cls+=' other';else cls+=' empty-f';
-
-  // Priority-colored top strip on card
-  const prioStrip=`<div style="height:4px;background:${pc.col};opacity:${prioKey==='3'?'.5':'1'}"></div>`;
-
-  const storeThumb=photo.src
-    ?`<img src="${photo.src}" alt="" style="width:100%;height:auto;max-height:200px;object-fit:contain;display:block">
-       <div class="fcard-hl" style="left:${rect.x}%;top:${rect.y}%;width:${rect.w}%;height:${rect.h}%;border:${pc.border}"></div>
-       <div class="fcard-check">${isActive?'✓':isOther?'!':''}</div>`
-    :`<div class="fcard-photo-ph">📷</div><div class="fcard-check">${isActive?'✓':''}</div>`;
-
-  const visStrip=shownCamp?.photo
-    ?`<div class="fcard-vis-strip"><div class="vis-inner"><img src="${shownCamp.photo}" alt=""></div></div>`
-    :`<div class="fcard-vis-strip"></div>`;
-
-  return`<div class="${cls}" onclick="toggleAssign('${st.id}','${photo.id}','${rect.id}')" style="${isActive&&pc.shadow?'box-shadow:0 0 0 3px '+pc.shadow:''}">
-    ${prioStrip}
-    <div class="fcard-photo">${storeThumb}</div>
-    ${visStrip}
-    <div class="fcard-info">
-      <div style="display:flex;align-items:center;gap:5px;margin-bottom:4px;flex-wrap:wrap">
-        <span class="fcard-type" style="background:${ft.bg}">${ft.label}</span>
-        <span style="font-size:.65rem;font-weight:800;padding:1px 7px;border-radius:20px;background:${pc.col}18;color:${pc.col};border:1px solid ${pc.col}44">${pc.label}</span>
-      </div>
-      <div class="fcard-label">${esc(rect.label||ft.label)}</div>
-      <div class="fcard-camp" style="font-size:.7rem;color:var(--t3)">${esc(photo.label||'')}</div>
-      <div class="fcard-camp">${isActive?'✓ '+esc(activeCamp?.name||''):isOther?'⚠ '+esc(otherCamp?.name||''):'prázdné — klikni pro přiřazení'}</div>
-    </div>
+  // Legend
+  const legendHtml=`<div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;padding:10px 14px;background:var(--s);border-radius:var(--rs);box-shadow:var(--ss);align-items:center">
+    <span style="font-size:.7rem;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.05em">Typy:</span>
+    ${Object.entries(FTC).map(([k,v])=>`<span style="display:flex;align-items:center;gap:4px;font-size:.75rem;font-weight:700;color:${v.bg}"><span style="width:12px;height:12px;border-radius:3px;background:${v.bg}"></span>${v.label}</span>`).join('')}
+    <span style="width:1px;height:16px;background:var(--bd);margin:0 4px"></span>
+    <span style="font-size:.7rem;font-weight:700;color:var(--t3)">Priorita:</span>
+    <span style="font-size:.75rem">🔴 Hlavní</span>
+    <span style="font-size:.75rem">🔵 Vedlejší</span>
+    <span style="font-size:.75rem">⚪ Doplňkový</span>
   </div>`;
+
+  grid.innerHTML=legendHtml+storeBlocks+previewHtml;
 }
 
 function toggleAssign(sid,phid,rid){
@@ -1221,11 +1399,17 @@ function toggleAssign(sid,phid,rid){
   const ph=st.photos.find(p=>p.id===phid);if(!ph)return;
   const r=(ph.rects||[]).find(x=>x.id===rid);if(!r)return;
   if(!activeCampId){toast('Vyber vizuál nahoře','err');return;}
-  if(r.campaignId===activeCampId){r.campaignId=null;save();renderAssignGrid();renderCampStrip();selCamp(activeCampId);toast('Přiřazení odebráno');}
-  else{
+
+  if(r.campaignId===activeCampId){
+    r.campaignId=null;
+    save();renderAssignGrid();renderCampPicker();selCamp(activeCampId);
+    toast('Odebráno');
+  } else {
     if(r.campaignId&&!confirm('Přepsat stávající přiřazení?'))return;
     const p=pool(activeCampId);if(p.avail<1){toast('Zásobník prázdný!','err');return;}
-    r.campaignId=activeCampId;save();renderAssignGrid();renderCampStrip();selCamp(activeCampId);toast('Přiřazeno ✓');
+    r.campaignId=activeCampId;
+    save();renderAssignGrid();renderCampPicker();selCamp(activeCampId);
+    toast('Přiřazeno ✓');
   }
 }
 function assignAll(){
@@ -1415,7 +1599,7 @@ function buildManualPage(st, campFilter){
   const totalFrames=st.photos.reduce((a,ph)=>a+(ph.rects||[]).filter(r=>r.campaignId&&(!campFilter||r.campaignId===campFilter)).length,0);
 
   // Color palette for campaigns (each gets a distinct color)
-  const COLORS=['#e8530a','#1a58a8','#1c7a42','#8b1a6e','#a66000','#b83228','#5c6182'];
+  const COLORS=['#D9502A','#1A5A8A','#3E7A30','#8B1A6E','#C8810C','#B83228','#474B30'];
   const campColor=new Map();
   camps.forEach((c,i)=>campColor.set(c.id,COLORS[i%COLORS.length]));
 
@@ -1615,6 +1799,111 @@ function expandStore(sid){
   expandedStores.add(sid);
   renderSetup();
   setTimeout(()=>{const el=document.getElementById('acc-'+sid);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},100);
+}
+
+// ── ROZESÍLKA ────────────────────────────────────────────────────────────────
+function showRozesilka(){
+  const panel=document.getElementById('rozesilka-panel');if(!panel)return;
+  if(panel.style.display!=='none'){panel.style.display='none';return;}
+
+  // Collect: for each store, which campaigns are assigned and how many frames
+  const storeShipments=[];
+  S.stores.forEach(st=>{
+    const campCounts={};
+    st.photos.forEach(ph=>(ph.rects||[]).forEach(r=>{
+      if(r.campaignId){
+        if(!campCounts[r.campaignId])campCounts[r.campaignId]=0;
+        campCounts[r.campaignId]++;
+      }
+    }));
+    if(Object.keys(campCounts).length){
+      const items=Object.entries(campCounts).map(([cid,cnt])=>{
+        const c=S.campaigns.find(x=>x.id===cid);
+        return{camp:c,count:cnt};
+      }).filter(x=>x.camp);
+      const total=items.reduce((a,x)=>a+x.count,0);
+      storeShipments.push({store:st,items,total});
+    }
+  });
+
+  if(!storeShipments.length){
+    panel.style.display='block';
+    panel.innerHTML=`<div style="background:var(--s);border-radius:var(--r);box-shadow:var(--sh);padding:24px;text-align:center;color:var(--t3)">
+      Žádná přiřazení — nejdřív přiřaď vizuály rámům v záložce Přiřazení
+    </div>`;
+    return;
+  }
+
+  const grandTotal=storeShipments.reduce((a,s)=>a+s.total,0);
+  const today=new Date().toLocaleDateString('cs',{day:'numeric',month:'long',year:'numeric'});
+
+  const rows=storeShipments.map(({store,items,total})=>{
+    const itemRows=items.map(({camp,count})=>`
+      <div style="display:flex;align-items:center;gap:8px;padding:4px 0">
+        ${camp.photo?`<img src="${camp.photo}" style="width:28px;height:28px;border-radius:5px;object-fit:contain;background:var(--bg);border:1px solid var(--bd);flex-shrink:0">`:`<div style="width:28px;height:28px;border-radius:5px;background:var(--bg);flex-shrink:0"></div>`}
+        <span style="flex:1;font-size:.875rem;font-weight:500">${esc(camp.name)}</span>
+        <span style="font-size:1rem;font-weight:800;color:var(--or);min-width:36px;text-align:right">${count} ks</span>
+      </div>`).join('');
+
+    return`<div style="background:var(--s);border-radius:var(--rs);border:1.5px solid var(--bd);overflow:hidden">
+      <div style="padding:10px 14px;background:var(--bg);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:8px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--or);color:#fff;border-radius:6px;font-size:.72rem;font-weight:800;flex-shrink:0">${store.num}</span>
+        <span style="font-weight:800;font-size:.9375rem;flex:1">${esc(store.name)}</span>
+        <span style="font-size:.875rem;font-weight:800;color:var(--or)">${total} ks</span>
+        <input type="checkbox" style="width:18px;height:18px;accent-color:var(--or);cursor:pointer" title="Zabaleno ✓">
+      </div>
+      <div style="padding:8px 14px">${itemRows}</div>
+    </div>`;
+  }).join('');
+
+  // Campaign totals summary
+  const campTotals={};
+  storeShipments.forEach(({items})=>items.forEach(({camp,count})=>{
+    if(!campTotals[camp.id])campTotals[camp.id]={camp,count:0};
+    campTotals[camp.id].count+=count;
+  }));
+  const summaryRows=Object.values(campTotals).map(({camp,count})=>`
+    <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bd)">
+      ${camp.photo?`<img src="${camp.photo}" style="width:24px;height:24px;border-radius:4px;object-fit:contain;background:var(--bg);border:1px solid var(--bd);flex-shrink:0">`:''}
+      <span style="flex:1;font-size:.875rem;font-weight:600">${esc(camp.name)}</span>
+      <span style="font-size:.9375rem;font-weight:800;color:var(--or)">${count} ks</span>
+    </div>`).join('');
+
+  panel.style.display='block';
+  panel.innerHTML=`
+    <div style="background:var(--s);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden">
+      <!-- HEADER -->
+      <div style="padding:16px 20px;border-bottom:2px solid var(--bd);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-weight:800;font-size:1.25rem;color:var(--tx)">📦 Rozesílka</div>
+          <div style="font-size:.8125rem;color:var(--t2);margin-top:2px">${today} · ${storeShipments.length} prodejen · ${grandTotal} kusů celkem</div>
+        </div>
+        <div style="display:flex;gap:6px">
+          <button class="btn bp bsm no-print" onclick="printRozesilka()">🖨 Tisknout</button>
+          <button class="btn bs bsm no-print" onclick="document.getElementById('rozesilka-panel').style.display='none'">✕ Zavřít</button>
+        </div>
+      </div>
+
+      <!-- SOUHRN -->
+      <div style="padding:14px 20px;border-bottom:1px solid var(--bd);background:#fdfaf7">
+        <div style="font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--t3);margin-bottom:8px">Souhrn — co celkem balit</div>
+        ${summaryRows}
+      </div>
+
+      <!-- PER STORE -->
+      <div style="padding:16px 20px">
+        <div style="font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--t3);margin-bottom:10px">Rozbalení po prodejnách — zaškrtni zabalené</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px">
+          ${rows}
+        </div>
+      </div>
+    </div>`;
+}
+
+function printRozesilka(){
+  document.body.classList.add('print-zasob');
+  window.print();
+  setTimeout(()=>document.body.classList.remove('print-zasob'),500);
 }
 
 function printZasob(){
