@@ -367,31 +367,7 @@
           "id": "mok1obpt0nu5f",
           "label": "Vnitří strana ulice na Poříčí",
           "src": "__idb__",
-          "rects": [
-            {
-              "id": "mok1pqsakh243",
-              "label": "A1 rám 1",
-              "type": "A1 rám 2",
-              "campaignId": null,
-              "x": 10.69609507640068,
-              "y": 18.215388533409733,
-              "w": 15.789473684210526,
-              "h": 39.93251201731768,
-              "priority": "1"
-            },
-            {
-              "id": "mok1pstbbgbly",
-              "label": "A1 rám 2",
-              "type": "Hlavní vedle zmrzliny",
-              "campaignId": null,
-              "x": 64.1766,
-              "y": 30.0322,
-              "w": 6.11205,
-              "h": 27.3008,
-              "priority": "1",
-              "groupId": "mol4vtobgehwy"
-            }
-          ]
+          "rects": []
         },
         {
           "id": "mok1ofrsrykp1",
