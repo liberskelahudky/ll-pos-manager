@@ -371,7 +371,7 @@
             {
               "id": "mok1pqsakh243",
               "label": "A1 rám 1",
-              "type": "led_in",
+              "type": "A1 rám 2",
               "campaignId": null,
               "x": 10.69609507640068,
               "y": 18.215388533409733,
@@ -382,7 +382,7 @@
             {
               "id": "mok1pstbbgbly",
               "label": "A1 rám 2",
-              "type": "led_in",
+              "type": "A1 rám 1",
               "campaignId": null,
               "x": 64.17657045840407,
               "y": 30.032152293636393,
@@ -419,6 +419,16 @@
               "w": 8.48896,
               "h": 27.7083,
               "priority": "2"
+            },
+            {
+              "id": "mol55zgxrzyla",
+              "label": "A1 rám 3",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 41.959798994974875,
+              "y": 42.75753768844221,
+              "w": 17.587939698492455,
+              "h": 46.231155778894475
             }
           ]
         }
