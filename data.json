@@ -801,7 +801,14 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "molm0vguh90ru",
+          "label": "",
+          "src": null,
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s09",
