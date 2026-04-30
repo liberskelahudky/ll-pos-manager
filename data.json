@@ -678,7 +678,7 @@
     {
       "id": "s05",
       "num": 65,
-      "name": "Poliklinika Budějovická",
+      "name": "Budějovická",
       "tags": {
         "zmrz": true,
         "tv": 4,
@@ -777,7 +777,7 @@
     },
     {
       "id": "s06",
-      "num": 6,
+      "num": 60,
       "name": "Krč",
       "tags": {
         "zmrz": true,
