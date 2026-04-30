@@ -1118,24 +1118,24 @@
           "id": "mol9mclkd0ozw",
           "label": "",
           "src": "__idb__",
-          "rects": [
-            {
-              "id": "mol9mp6p2ha0l",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": null,
-              "x": 49.23599320882852,
-              "y": 20.25276159551778,
-              "w": 17.14770797962649,
-              "h": 63.15856492534938
-            }
-          ]
+          "rects": []
         },
         {
           "id": "mol9mje4vr1h9",
           "label": "",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "mol9mtn9zvdyt",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 46.6893039049236,
+              "y": 12.510743959507211,
+              "w": 17.65704584040747,
+              "h": 56.638971126603636
+            }
+          ]
         }
       ]
     },
