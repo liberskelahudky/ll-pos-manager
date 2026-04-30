@@ -324,7 +324,7 @@
   "stores": [
     {
       "id": "s01",
-      "num": 1,
+      "num": 64,
       "name": "Na Poříčí",
       "tags": {
         "zmrz": true,
@@ -777,7 +777,7 @@
     },
     {
       "id": "s06",
-      "num": 60,
+      "num": 6,
       "name": "Krč",
       "tags": {
         "zmrz": true,
