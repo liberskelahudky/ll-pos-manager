@@ -337,7 +337,18 @@
           "id": "mollutq8knf6u",
           "label": "",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "mollwig21hrd9",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 14.824120603015075,
+              "y": 42.29271356783919,
+              "w": 11.892797319932999,
+              "h": 34.572864321608044
+            }
+          ]
         },
         {
           "id": "mollv5e0magoz",
