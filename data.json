@@ -36,8 +36,8 @@
       "stock": 19,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": null,
-      "dateTo": null,
+      "dateFrom": "2026-09-01",
+      "dateTo": "2026-11-30",
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -246,7 +246,7 @@
       "stock": 20,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-11-01",
+      "dateFrom": "2026-09-16",
       "dateTo": "2026-12-31",
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
