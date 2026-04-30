@@ -1317,7 +1317,7 @@
               "id": "mok32vstd70lc",
               "label": "A1 rám 2",
               "type": "led_out",
-              "campaignId": null,
+              "campaignId": "mok0rtmtlpin9",
               "x": 17.65704584040747,
               "y": 32.74122178715818,
               "w": 7.809847198641769,
