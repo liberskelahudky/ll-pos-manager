@@ -418,7 +418,18 @@
           "id": "mollvrffr145j",
           "label": "",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "mollwzd1cuj05",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 7.2864321608040195,
+              "y": 36.12437185929648,
+              "w": 12.730318257956448,
+              "h": 41.005025125628144
+            }
+          ]
         }
       ]
     },
