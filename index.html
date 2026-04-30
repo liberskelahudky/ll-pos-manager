@@ -1239,8 +1239,18 @@ function renderCampPicker(){
     el.innerHTML='<div style="padding:14px;background:var(--s);border-radius:var(--rs);border:1.5px dashed var(--bd);color:var(--t3);font-size:.875rem">Nejdřív vytvoř kampaně v záložce Kampaně.</div>';
     return;
   }
+  // Sort: selected first, then active, then preparing, then rest
+  const sorted=S.campaigns.slice().sort((a,b)=>{
+    if(a.id===activeCampId)return-1;if(b.id===activeCampId)return 1;
+    const sa=campStatus(a),sb=campStatus(b);
+    const o={'Aktivní':0,'Připravuje se':1};
+    const oa=o[sa.label]!=null?o[sa.label]:2;
+    const ob=o[sb.label]!=null?o[sb.label]:2;
+    if(oa!==ob)return oa-ob;
+    return(b.createdAt||'').localeCompare(a.createdAt||'');
+  });
   el.innerHTML=`<div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:6px">
-    ${S.campaigns.map(c=>{
+    ${sorted.map(c=>{
       const p=pool(c.id);
       const pct=p.total?Math.round((p.avail/p.total)*100):0;
       const col=pct>50?'var(--gn)':pct>20?'var(--am)':'var(--rd)';
@@ -1380,13 +1390,13 @@ function toggleAssign(sid,phid,rid){
 
   if(r.campaignId===activeCampId){
     r.campaignId=null;
-    save();renderAssignGrid();renderCampPicker();selCamp(activeCampId);
+    save();renderAssignGrid();renderCampPicker();
     toast('Odebráno');
   } else {
     if(r.campaignId&&!confirm('Přepsat stávající přiřazení?'))return;
     const p=pool(activeCampId);if(p.avail<1){toast('Zásobník prázdný!','err');return;}
     r.campaignId=activeCampId;
-    save();renderAssignGrid();renderCampPicker();selCamp(activeCampId);
+    save();renderAssignGrid();renderCampPicker();
     toast('Přiřazeno ✓');
   }
 }
