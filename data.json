@@ -334,92 +334,10 @@
       },
       "photos": [
         {
-          "id": "mok0xq24tzlsu",
-          "label": "Venkovní pohled, ulice na Poříčí",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mok1plhb2bv00",
-              "label": "A1 zvenku 1",
-              "type": "A1 u zmrzliny",
-              "campaignId": "mok0rd44res0p",
-              "x": 16.8081,
-              "y": 19.4378,
-              "w": 9.50768,
-              "h": 34.2278,
-              "priority": "1",
-              "groupId": "mol4vtobgehwy"
-            },
-            {
-              "id": "mok1pnrp2jgdi",
-              "label": "A1 zvenku 2",
-              "type": "POR 2",
-              "campaignId": "mok0qs85nczei",
-              "x": 63.6672,
-              "y": 23.1051,
-              "w": 9.67742,
-              "h": 32.1905,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "mok1obpt0nu5f",
-          "label": "Vnitří strana ulice na Poříčí",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mol5ftko5hqss",
-              "label": "A1 rám 1",
-              "type": "POR 2",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 11.474036850921273,
-              "y": 16.564070351758794,
-              "w": 14.57286432160804,
-              "h": 42.61306532663316,
-              "priority": "2"
-            },
-            {
-              "id": "mol5fwrbv0x2y",
-              "label": "A1 rám 2",
-              "type": "POR 1",
-              "campaignId": null,
-              "x": 64.57286432160804,
-              "y": 29.428391959798994,
-              "w": 8.87772194304857,
-              "h": 36.98492462311558,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "mok1ofrsrykp1",
-          "label": "Vnitřní strana ulice Biskupská",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mok1pv77myiyq",
-              "label": "A1 rám 1",
-              "type": "POR 3",
-              "campaignId": null,
-              "x": 64.85568760611206,
-              "y": 12.507560564097666,
-              "w": 11.375212224108651,
-              "h": 36.265240505523195,
-              "priority": "2"
-            },
-            {
-              "id": "mok1pyeohhx24",
-              "label": "A1 rám 2",
-              "type": "POR 4",
-              "campaignId": null,
-              "x": 28.0136,
-              "y": 24.7318,
-              "w": 8.48896,
-              "h": 27.7083,
-              "priority": "2"
-            }
-          ]
+          "id": "mollutq8knf6u",
+          "label": "",
+          "src": null,
+          "rects": []
         }
       ]
     },
