@@ -1538,18 +1538,6 @@
           "rects": []
         }
       ]
-    },
-    {
-      "id": "s22",
-      "num": 22,
-      "name": "Hl. Nádraží",
-      "tags": {
-        "zmrz": true,
-        "tv": 6,
-        "kiosek": true,
-        "vyrobna": false
-      },
-      "photos": []
     }
   ]
 }
