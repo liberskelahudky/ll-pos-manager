@@ -353,7 +353,7 @@
             {
               "id": "mok1pnrp2jgdi",
               "label": "A1 zvenku 2",
-              "type": "led_out",
+              "type": "Hlavní vedle vchodu 2",
               "campaignId": null,
               "x": 63.6672,
               "y": 23.1051,
@@ -371,7 +371,7 @@
             {
               "id": "mok1pqsakh243",
               "label": "A1 rám 1",
-              "type": "Hlavní vedle vchodu",
+              "type": "A1 rám 2",
               "campaignId": null,
               "x": 10.69609507640068,
               "y": 18.215388533409733,
