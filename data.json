@@ -409,7 +409,7 @@
             {
               "id": "mok1pyeohhx24",
               "label": "A1 rám 2",
-              "type": "led_in",
+              "type": "POR 4",
               "campaignId": null,
               "x": 28.0136,
               "y": 24.7318,
