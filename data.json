@@ -367,7 +367,18 @@
           "id": "mok1obpt0nu5f",
           "label": "Vnitří strana ulice na Poříčí",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "mol5ftko5hqss",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 11.474036850921273,
+              "y": 16.564070351758794,
+              "w": 14.57286432160804,
+              "h": 42.61306532663316
+            }
+          ]
         },
         {
           "id": "mok1ofrsrykp1",
