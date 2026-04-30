@@ -813,7 +813,14 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "molm0nt61sps7",
+          "label": "",
+          "src": null,
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s10",
