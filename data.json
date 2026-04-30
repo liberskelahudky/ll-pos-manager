@@ -341,7 +341,7 @@
             {
               "id": "mok1plhb2bv00",
               "label": "A1 zvenku 1",
-              "type": "Hlavní vedle zmrzliny 1",
+              "type": "Hlavní vedle zmrzliny",
               "campaignId": null,
               "x": 16.8081,
               "y": 19.4378,
@@ -353,7 +353,7 @@
             {
               "id": "mok1pnrp2jgdi",
               "label": "A1 zvenku 2",
-              "type": "Hlavní vedle vchodu 2",
+              "type": "Hlavní vedle vchodu",
               "campaignId": null,
               "x": 63.6672,
               "y": 23.1051,
@@ -382,7 +382,7 @@
             {
               "id": "mok1pstbbgbly",
               "label": "A1 rám 2",
-              "type": "Hlavní vedle zmrzliny 1",
+              "type": "Hlavní vedle zmrzliny",
               "campaignId": null,
               "x": 64.17657045840407,
               "y": 30.032152293636393,
