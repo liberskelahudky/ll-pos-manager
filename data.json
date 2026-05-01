@@ -1251,7 +1251,7 @@
           "rects": [
             {
               "id": "mok277n8q32nf",
-              "label": "A1 zvenku 1",
+              "label": "2",
               "type": "led_out",
               "campaignId": "mok0rtmtlpin9",
               "x": 12.563667232597622,
@@ -1291,7 +1291,7 @@
             },
             {
               "id": "mok27etfkim0h",
-              "label": "A1 rám 2",
+              "label": "2",
               "type": "led_in",
               "campaignId": "mok0rtmtlpin9",
               "x": 58.40407470288624,
