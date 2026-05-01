@@ -1140,7 +1140,18 @@
           "id": "mommzg5d4q3di",
           "label": "",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "mommzwev95i7i",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 14.656616415410383,
+              "y": 30.747487437185928,
+              "w": 7.705192629815748,
+              "h": 28.542713567839197
+            }
+          ]
         },
         {
           "id": "mommzlp5juqe1",
