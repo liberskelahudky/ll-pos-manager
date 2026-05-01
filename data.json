@@ -864,7 +864,7 @@
             },
             {
               "id": "molm2dpws12a8",
-              "label": "2",
+              "label": "A1 rám 2",
               "type": "led_out",
               "campaignId": "mok0rtmtlpin9",
               "x": 75.96314907872697,
@@ -895,7 +895,7 @@
           "rects": [
             {
               "id": "momn7qbrwdosx",
-              "label": "A1 rám 1",
+              "label": "1",
               "type": "led_out",
               "campaignId": null,
               "x": 36.26465661641541,
