@@ -1212,7 +1212,18 @@
           "id": "momn1zjj423kb",
           "label": "",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "momn8av07ds1o",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 17.504187604690117,
+              "y": 17.204773869346734,
+              "w": 16.24790619765494,
+              "h": 57.08542713567839
+            }
+          ]
         },
         {
           "id": "momn24rneseht",
