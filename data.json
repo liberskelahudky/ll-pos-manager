@@ -1837,7 +1837,18 @@
           "id": "mok1w02nzgfqr",
           "label": "Interiér",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "momn96fnohjz1",
+              "label": "A1 uvnitř 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 21.691792294807367,
+              "y": 5.961055276381909,
+              "w": 23.61809045226131,
+              "h": 89.2462311557789
+            }
+          ]
         }
       ]
     }
