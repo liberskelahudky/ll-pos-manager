@@ -1810,7 +1810,18 @@
           "id": "mok1vtnb85kfi",
           "label": "Zvenku",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "momn90ttob4jj",
+              "label": "A1 zvenku 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 38.60971524288107,
+              "y": 38.925879396984925,
+              "w": 8.040201005025125,
+              "h": 31.75879396984925
+            }
+          ]
         },
         {
           "id": "mok1w02nzgfqr",
