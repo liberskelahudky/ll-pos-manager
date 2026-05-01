@@ -1113,37 +1113,7 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "mommwxfsdajnz",
-          "label": "",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mommz8blb8o3h",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": null,
-              "x": 20.68676716917923,
-              "y": 6.683417085427136,
-              "w": 25.293132328308207,
-              "h": 88.44221105527639,
-              "priority": "2"
-            },
-            {
-              "id": "mommzampdtjvr",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": null,
-              "x": 58.87772194304858,
-              "y": 14.321608040201006,
-              "w": 23.95309882747069,
-              "h": 82.01005025125627,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s13",
