@@ -899,7 +899,7 @@
       "num": 511,
       "name": "Palmovka cukrárna",
       "tags": {
-        "zmrz": true,
+        "zmrz": false,
         "tv": 0,
         "kiosek": false,
         "vyrobna": false
