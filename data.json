@@ -495,7 +495,18 @@
           "id": "momms8tj1d5zv",
           "label": "Zevnitř",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "mommvuivr3y3l",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 25.879396984924625,
+              "y": 32.85175879396985,
+              "w": 8.207705192629817,
+              "h": 30.150753768844226
+            }
+          ]
         }
       ]
     },
