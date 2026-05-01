@@ -1122,7 +1122,7 @@
             {
               "id": "momptb0zb0b32",
               "label": "1",
-              "type": "led_out",
+              "type": "wall",
               "campaignId": null,
               "x": 17.001675041876048,
               "y": 8.35427135678392,
