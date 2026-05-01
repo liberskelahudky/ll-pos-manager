@@ -1039,7 +1039,7 @@
           "rects": [
             {
               "id": "moaaxzh2i7rq3",
-              "label": "A1 rám 1",
+              "label": "3",
               "type": "led_in",
               "campaignId": "mok0qs85nczei",
               "x": 16.129032258064516,
@@ -1050,7 +1050,7 @@
             },
             {
               "id": "moaay2b57ptpu",
-              "label": "A1 rám 2",
+              "label": "2",
               "type": "led_in",
               "campaignId": "mok0rtmtlpin9",
               "x": 38.37011884550085,
