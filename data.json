@@ -1135,7 +1135,14 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "mommzg5d4q3di",
+          "label": "",
+          "src": null,
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s14",
