@@ -1115,35 +1115,6 @@
       },
       "photos": [
         {
-          "id": "mommwv0zg9b69",
-          "label": "",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mommz1jwvmvoa",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 39.11222780569514,
-              "y": 39.64824120603015,
-              "w": 7.537688442211056,
-              "h": 32.56281407035176,
-              "priority": "2"
-            },
-            {
-              "id": "mommzdyy1mmiw",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": null,
-              "x": 49.32998324958124,
-              "y": 38.44221105527638,
-              "w": 7.3701842546063645,
-              "h": 34.17085427135678,
-              "priority": "2"
-            }
-          ]
-        },
-        {
           "id": "mommwxfsdajnz",
           "label": "",
           "src": "__idb__",
