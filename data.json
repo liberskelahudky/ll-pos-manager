@@ -890,7 +890,18 @@
           "id": "molm0vguh90ru",
           "label": "",
           "src": "__idb__",
-          "rects": []
+          "rects": [
+            {
+              "id": "momn7qbrwdosx",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 36.26465661641541,
+              "y": 11.331658291457286,
+              "w": 24.45561139028475,
+              "h": 77.18592964824121
+            }
+          ]
         }
       ]
     },
