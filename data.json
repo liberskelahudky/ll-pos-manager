@@ -492,7 +492,7 @@
             {
               "id": "mp5edpmruzkzr",
               "label": "A1 zvenku 3",
-              "type": "led_out",
+              "type": "klapram",
               "campaignId": null,
               "x": 66.91792294807371,
               "y": 43.30402010050251,
