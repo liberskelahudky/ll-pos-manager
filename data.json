@@ -920,12 +920,13 @@
             {
               "id": "mp5egj82hhbu9",
               "label": "A1 zvenku 3",
-              "type": "led_out",
+              "type": "wall",
               "campaignId": null,
               "x": 50,
               "y": 16.6143216080402,
               "w": 18.76046901172529,
-              "h": 43.81909547738693
+              "h": 43.81909547738693,
+              "priority": "3"
             }
           ]
         }
