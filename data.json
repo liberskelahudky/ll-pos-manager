@@ -319,6 +319,16 @@
       "dateFrom": "2026-05-01",
       "dateTo": "2026-07-31",
       "createdAt": "2026-04-29T12:17:06.821Z"
+    },
+    {
+      "id": "mp5ekn4aqnn9r",
+      "name": "Sticker maracuja",
+      "stock": 12,
+      "photo": "__idb__",
+      "note": "",
+      "dateFrom": "2026-05-18",
+      "dateTo": "2026-06-06",
+      "createdAt": "2026-05-14T11:26:17.098Z"
     }
   ],
   "stores": [
