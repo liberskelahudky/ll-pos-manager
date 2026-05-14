@@ -585,7 +585,7 @@
             {
               "id": "mp5ef14t7tz3f",
               "label": "A1 zvenku 4",
-              "type": "led_out",
+              "type": "wall",
               "campaignId": null,
               "x": 0.41876046901172526,
               "y": 53.29773869346733,
