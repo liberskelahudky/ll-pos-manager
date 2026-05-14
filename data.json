@@ -1463,7 +1463,7 @@
             {
               "id": "mp5eiebvohwm3",
               "label": "A1 zvenku 3",
-              "type": "led_out",
+              "type": "wall",
               "campaignId": null,
               "x": 89.0284757118928,
               "y": 36.38819095477387,
