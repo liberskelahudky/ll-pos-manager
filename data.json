@@ -269,16 +269,6 @@
       "dateFrom": null,
       "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
-    },
-    {
-      "id": "mo8l8efkjfwvk",
-      "name": "Svatební koláče",
-      "stock": 1,
-      "photo": "https://drive.google.com/thumbnail?id=1aW3vQqTKTF5ngbobUIRYf_xQ4DXOMkqY&sz=w400",
-      "note": "",
-      "dateFrom": null,
-      "dateTo": null,
-      "createdAt": "2026-04-21T12:16:19.472Z"
     }
   ],
   "stores": [
@@ -328,26 +318,7 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaalw0p2jyp1",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        },
-        {
-          "id": "moaam3e8kcd1g",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        },
-        {
-          "id": "moaam9np8tapn",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s05",
@@ -359,26 +330,7 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaamo3kkx1md",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        },
-        {
-          "id": "moaan11jymbrb",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        },
-        {
-          "id": "moaan99h4k5l0",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s06",
@@ -450,26 +402,7 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaanr5uyecps",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        },
-        {
-          "id": "moaao3jovl0qm",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        },
-        {
-          "id": "moaao9zqugpx2",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s12",
@@ -505,14 +438,7 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaaoi6nfp2in",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s15",
@@ -524,20 +450,7 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaarzx0q1na7",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        },
-        {
-          "id": "moaas9b4y95nv",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s16",
@@ -549,20 +462,7 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": [
-        {
-          "id": "mo8zqodu7via5",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        },
-        {
-          "id": "moaasnyvbh93h",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s17",
@@ -586,14 +486,7 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": [
-        {
-          "id": "moaaupyrc59lx",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s19",
@@ -605,20 +498,7 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaat27thhkjo",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        },
-        {
-          "id": "moaatanr2foth",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s20",
@@ -630,20 +510,7 @@
         "kiosek": true,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaatj1twv8d0",
-          "label": "",
-          "src": "__idb__",
-          "rects": []
-        },
-        {
-          "id": "moaatqx6dg0m0",
-          "label": "",
-          "src": null,
-          "rects": []
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s21",
