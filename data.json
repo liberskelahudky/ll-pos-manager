@@ -6,8 +6,8 @@
       "stock": 8,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-09-16",
-      "dateTo": "2026-11-30",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -16,8 +16,8 @@
       "stock": 5,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-05-16",
-      "dateTo": "2026-06-15",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -26,8 +26,8 @@
       "stock": 10,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-09-16",
-      "dateTo": "2026-10-15",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -36,8 +36,8 @@
       "stock": 19,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-09-01",
-      "dateTo": "2026-11-30",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -46,8 +46,8 @@
       "stock": 23,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-05-16",
-      "dateTo": "2026-06-15",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -56,8 +56,8 @@
       "stock": 6,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-09-16",
-      "dateTo": "2026-10-31",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -66,8 +66,8 @@
       "stock": 24,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-08-01",
-      "dateTo": "2026-10-31",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -76,8 +76,8 @@
       "stock": 18,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-01-16",
-      "dateTo": "2026-02-15",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -96,8 +96,8 @@
       "stock": 11,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-01-01",
-      "dateTo": "2026-01-31",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -106,8 +106,8 @@
       "stock": 18,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-01-16",
-      "dateTo": "2026-02-15",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -146,8 +146,8 @@
       "stock": 14,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-01-16",
-      "dateTo": "2026-02-28",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -156,8 +156,8 @@
       "stock": 7,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-10-16",
-      "dateTo": "2026-11-15",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -166,8 +166,8 @@
       "stock": 17,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-07-01",
-      "dateTo": "2026-08-31",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -196,8 +196,8 @@
       "stock": 18,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-01-16",
-      "dateTo": "2026-02-28",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -206,8 +206,8 @@
       "stock": 3,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-01-01",
-      "dateTo": "2026-02-15",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -216,8 +216,8 @@
       "stock": 4,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-01-16",
-      "dateTo": "2026-02-15",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -226,8 +226,8 @@
       "stock": 22,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-01-16",
-      "dateTo": "2026-02-15",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -236,8 +236,8 @@
       "stock": 14,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-02-01",
-      "dateTo": "2026-02-28",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -246,8 +246,8 @@
       "stock": 20,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-09-16",
-      "dateTo": "2026-12-31",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -256,8 +256,8 @@
       "stock": 22,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-10-01",
-      "dateTo": "2026-12-31",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
     },
     {
@@ -266,75 +266,15 @@
       "stock": 7,
       "photo": "__idb__",
       "note": "",
-      "dateFrom": "2026-11-16",
-      "dateTo": "2026-12-15",
+      "dateFrom": null,
+      "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
-    },
-    {
-      "id": "mo8l8efkjfwvk",
-      "name": "Svatební koláče",
-      "stock": 1,
-      "photo": "https://drive.google.com/thumbnail?id=1aW3vQqTKTF5ngbobUIRYf_xQ4DXOMkqY&sz=w400",
-      "note": "",
-      "dateFrom": "2026-05-16",
-      "dateTo": "2026-07-31",
-      "createdAt": "2026-04-21T12:16:19.472Z"
-    },
-    {
-      "id": "mok0qs85nczei",
-      "name": "Nové ovoce",
-      "stock": 80,
-      "photo": "__idb__",
-      "note": "",
-      "dateFrom": "2026-05-01",
-      "dateTo": "2026-05-31",
-      "createdAt": "2026-04-29T12:15:59.333Z"
-    },
-    {
-      "id": "mok0rd44res0p",
-      "name": "Dezert maracuja",
-      "stock": 80,
-      "photo": "__idb__",
-      "note": "",
-      "dateFrom": "2026-05-01",
-      "dateTo": "2026-05-31",
-      "createdAt": "2026-04-29T12:16:26.404Z"
-    },
-    {
-      "id": "mok0rtmtlpin9",
-      "name": "Řecký jogurt",
-      "stock": 80,
-      "photo": "__idb__",
-      "note": "",
-      "dateFrom": "2026-05-01",
-      "dateTo": "2026-07-31",
-      "createdAt": "2026-04-29T12:16:47.813Z"
-    },
-    {
-      "id": "mok0s8atqdkos",
-      "name": "Chléb a pomazánky",
-      "stock": 80,
-      "photo": "__idb__",
-      "note": "",
-      "dateFrom": "2026-05-01",
-      "dateTo": "2026-07-31",
-      "createdAt": "2026-04-29T12:17:06.821Z"
-    },
-    {
-      "id": "mp5ekn4aqnn9r",
-      "name": "Sticker maracuja",
-      "stock": 12,
-      "photo": "__idb__",
-      "note": "",
-      "dateFrom": "2026-05-18",
-      "dateTo": "2026-06-06",
-      "createdAt": "2026-05-14T11:26:17.098Z"
     }
   ],
   "stores": [
     {
       "id": "s01",
-      "num": 64,
+      "num": 1,
       "name": "Na Poříčí",
       "tags": {
         "zmrz": true,
@@ -342,128 +282,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "mollutq8knf6u",
-          "label": "Venku ulice Na Poříčí",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mollwig21hrd9",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 14.824120603015075,
-              "y": 42.29271356783919,
-              "w": 11.892797319932999,
-              "h": 34.572864321608044,
-              "priority": "2"
-            },
-            {
-              "id": "mollwkl3122ni",
-              "label": "2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 73.95309882747068,
-              "y": 39.4786432160804,
-              "w": 10.720268006700167,
-              "h": 32.56281407035176,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "mollv5e0magoz",
-          "label": "Venku ulice Biskupská",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mollwn8qi4zv0",
-              "label": "3",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 14.154103852596315,
-              "y": 23.800251256281406,
-              "w": 12.395309882747071,
-              "h": 39.798994974874375,
-              "priority": "2"
-            },
-            {
-              "id": "mollwpsq7v771",
-              "label": "4",
-              "type": "led_out",
-              "campaignId": "mok0s8atqdkos",
-              "x": 74.62311557788944,
-              "y": 35.45854271356784,
-              "w": 9.38023450586266,
-              "h": 28.140703517587944,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "mollvidqdhd80",
-          "label": "Vnitřní strana Na Poříčí",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mollwtes87a4q",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 14.656616415410383,
-              "y": 38.53643216080402,
-              "w": 8.542713567839197,
-              "h": 28.944723618090457,
-              "priority": "2"
-            },
-            {
-              "id": "mollwvwuym297",
-              "label": "2",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 66.75041876046902,
-              "y": 24.064070351758794,
-              "w": 13.5678391959799,
-              "h": 41.40703517587941,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "mollvrffr145j",
-          "label": "Vnitří strana ulice Biskupská",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mollx5291618m",
-              "label": "4",
-              "type": "led_out",
-              "campaignId": "mok0s8atqdkos",
-              "x": 8.291457286432161,
-              "y": 36.928391959798994,
-              "w": 10.720268006700168,
-              "h": 36.58291457286432,
-              "priority": "2"
-            },
-            {
-              "id": "mollx87p0vdiz",
-              "label": "3",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 80.31825795644892,
-              "y": 35.32035175879397,
-              "w": 11.557788944723612,
-              "h": 36.18090452261307,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s02",
-      "num": 73,
+      "num": 2,
       "name": "Holešovice",
       "tags": {
         "zmrz": true,
@@ -471,81 +294,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaavmw5zle2e",
-          "label": "Zvenku",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaaw95ofyo25",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 26.6553480475382,
-              "y": 33.98592939228982,
-              "w": 7.809847198641766,
-              "h": 28.115748257091006,
-              "priority": "1"
-            },
-            {
-              "id": "moaawby8kmjge",
-              "label": "2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 51.44312393887945,
-              "y": 34.39340400471143,
-              "w": 8.828522920203739,
-              "h": 27.708273644669397,
-              "priority": "1"
-            },
-            {
-              "id": "mp5edpmruzkzr",
-              "label": "A1 zvenku 3",
-              "type": "klapram",
-              "campaignId": "mp5ekn4aqnn9r",
-              "x": 66.5829,
-              "y": 42.902,
-              "w": 9.54774,
-              "h": 27.7387,
-              "priority": "3"
-            }
-          ]
-        },
-        {
-          "id": "momms8tj1d5zv",
-          "label": "Zevnitř",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mommvuivr3y3l",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0s8atqdkos",
-              "x": 25.879396984924625,
-              "y": 32.85175879396985,
-              "w": 8.207705192629817,
-              "h": 30.150753768844226,
-              "priority": "2"
-            },
-            {
-              "id": "mommw21tm30e5",
-              "label": "2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 52.17755443886097,
-              "y": 35.665829145728644,
-              "w": 7.872696817420433,
-              "h": 28.140703517587937,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s03",
-      "num": 53,
+      "num": 3,
       "name": "Vodičkova",
       "tags": {
         "zmrz": true,
@@ -553,103 +306,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "mok284miy8jga",
-          "label": "Venkovní pohled",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mok2uk2klr2c7",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 21.052631578947366,
-              "y": 38.33763091713622,
-              "w": 9.847198641765704,
-              "h": 35.85776589310158,
-              "priority": "1"
-            },
-            {
-              "id": "mok2umvf9hpo8",
-              "label": "2",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 40.4075,
-              "y": 39.1526,
-              "w": 10.5263,
-              "h": 35.4503,
-              "priority": "2"
-            },
-            {
-              "id": "mok2upfk3vw8d",
-              "label": "3",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 74.02376910016977,
-              "y": 41.18995320408748,
-              "w": 10.016977928692711,
-              "h": 33.82039283099355,
-              "priority": "2"
-            },
-            {
-              "id": "mp5ef14t7tz3f",
-              "label": "A1 zvenku 4",
-              "type": "wall",
-              "campaignId": "mp5ekn4aqnn9r",
-              "x": 0.41876046901172526,
-              "y": 53.29773869346733,
-              "w": 14.070351758793969,
-              "h": 38.19095477386934,
-              "priority": "3"
-            }
-          ]
-        },
-        {
-          "id": "mok2u7pdjv1yn",
-          "label": "Interiér",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mok2usdm85e54",
-              "label": "3",
-              "type": "led_in",
-              "campaignId": "mok0s8atqdkos",
-              "x": 11.544991511035652,
-              "y": 21.63117180785025,
-              "w": 15.619694397283533,
-              "h": 53.37917422723078,
-              "priority": "1"
-            },
-            {
-              "id": "mok2uvcg2y5br",
-              "label": "2",
-              "type": "led_in",
-              "campaignId": "mok0qs85nczei",
-              "x": 55.34804753820034,
-              "y": 31.818037118390475,
-              "w": 11.544991511035654,
-              "h": 40.33998662973927,
-              "priority": "2"
-            },
-            {
-              "id": "mok2uycze9uft",
-              "label": "1",
-              "type": "led_in",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 71.30730050933785,
-              "y": 33.85541018049852,
-              "w": 9.847198641765715,
-              "h": 36.2652405055232,
-              "priority": "1"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s04",
-      "num": 69,
+      "num": 4,
       "name": "Arkády",
       "tags": {
         "zmrz": false,
@@ -657,99 +318,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaalw0p2jyp1",
-          "label": "Zevnitř",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaawivzg84ke",
-              "label": "1",
-              "type": "led_in",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 10.35653650254669,
-              "y": 19.47919651099863,
-              "w": 19.524617996604412,
-              "h": 56.23149651418203,
-              "priority": "2"
-            },
-            {
-              "id": "moaawlkfwtu4q",
-              "label": "2",
-              "type": "led_in",
-              "campaignId": "mok0qs85nczei",
-              "x": 67.91171477079796,
-              "y": 21.516569573106676,
-              "w": 12.393887945670642,
-              "h": 50.5268519402795,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "moaam3e8kcd1g",
-          "label": "Zvenku",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaawo1v3vner",
-              "label": "2",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 2.7164685908319184,
-              "y": 21.924044185528285,
-              "w": 19.524617996604412,
-              "h": 61.93614108808454,
-              "priority": "2"
-            },
-            {
-              "id": "moaawralyqgh6",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 65.53480475382003,
-              "y": 20.294145735841848,
-              "w": 19.01528013582343,
-              "h": 63.566039537770976,
-              "priority": "2"
-            },
-            {
-              "id": "mp5eg8ddxxypo",
-              "label": "A1 zvenku 3",
-              "type": "wall",
-              "campaignId": "mp5ekn4aqnn9r",
-              "x": 33.75209380234506,
-              "y": 30.326633165829147,
-              "w": 19.262981574539367,
-              "h": 48.24120603015075,
-              "priority": "3"
-            }
-          ]
-        },
-        {
-          "id": "moaam9np8tapn",
-          "label": "Pohled do prodejny",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaawu6q8gziq",
-              "label": "3",
-              "type": "klapram",
-              "campaignId": "mok0rd44res0p",
-              "x": 37.6911,
-              "y": 20.6984,
-              "w": 12.7335,
-              "h": 42.3774,
-              "priority": "1"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s05",
-      "num": 65,
+      "num": 5,
       "name": "Budějovická",
       "tags": {
         "zmrz": true,
@@ -757,110 +330,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaamo3kkx1md",
-          "label": "Interiér",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaax3k8m53bu",
-              "label": "A1 rám 1",
-              "type": "led_in",
-              "campaignId": "mok0rd44res0p",
-              "x": 3.395585738539898,
-              "y": 25.46397988094101,
-              "w": 12.733446519524618,
-              "h": 41.96988507942572,
-              "priority": "2"
-            },
-            {
-              "id": "moaax67eod80b",
-              "label": "2",
-              "type": "led_in",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 44.312393887945674,
-              "y": 36.05831980390285,
-              "w": 7.640067911714766,
-              "h": 30.15312131919906,
-              "priority": "2"
-            },
-            {
-              "id": "moaax8g5mutva",
-              "label": "3",
-              "type": "led_in",
-              "campaignId": "mok0qs85nczei",
-              "x": 77.24957555178268,
-              "y": 42.17043899022698,
-              "w": 9.16808149405773,
-              "h": 25.263425970139757,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "moaan11jymbrb",
-          "label": "",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaaxb5m5jhxh",
-              "label": "2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 18.675721561969443,
-              "y": 30.35367523000032,
-              "w": 8.998302207130727,
-              "h": 30.15312131919905,
-              "priority": "2"
-            },
-            {
-              "id": "moaaxdh7kdwpz",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 56.536502546689306,
-              "y": 23.834081431254575,
-              "w": 11.035653650254673,
-              "h": 38.71008818005285,
-              "priority": "2"
-            },
-            {
-              "id": "mp5efydpt5e8o",
-              "label": "A1 rám 3",
-              "type": "wall",
-              "campaignId": "mp5ekn4aqnn9r",
-              "x": 77.1356783919598,
-              "y": 30.935929648241206,
-              "w": 14.90787269681742,
-              "h": 37.386934673366845,
-              "priority": "3"
-            }
-          ]
-        },
-        {
-          "id": "moaan99h4k5l0",
-          "label": "Pohled od recepce",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaaxglcsd7ot",
-              "label": "3",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 45.840407470288625,
-              "y": 29.535542609747555,
-              "w": 9.33786078098472,
-              "h": 30.56059593162067,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s06",
-      "num": 60,
+      "num": 6,
       "name": "Krč",
       "tags": {
         "zmrz": true,
@@ -868,30 +342,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "molm2hp6fefv6",
-          "label": "Vstupní chodba",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "molm5auiz557o",
-              "label": "1",
-              "type": "wall",
-              "campaignId": "mok0rd44res0p",
-              "x": 42.29480737018426,
-              "y": 26.72110552763819,
-              "w": 18.257956448911223,
-              "h": 58.29145728643216,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s07",
-      "num": 52,
+      "num": 7,
       "name": "Letná",
       "tags": {
         "zmrz": true,
@@ -899,52 +354,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "molm0ztlac2eh",
-          "label": "Zvenku",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "molm29ydspur0",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 2.261306532663317,
-              "y": 27.606783919597987,
-              "w": 10.887772194304857,
-              "h": 39.39698492462311,
-              "priority": "2"
-            },
-            {
-              "id": "molm2dpws12a8",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 75.96314907872697,
-              "y": 10.32035175879397,
-              "w": 16.917922948073695,
-              "h": 52.26130653266332,
-              "priority": "2"
-            },
-            {
-              "id": "mp5egj82hhbu9",
-              "label": "A1 zvenku 3",
-              "type": "wall",
-              "campaignId": "mp5ekn4aqnn9r",
-              "x": 50,
-              "y": 16.6143216080402,
-              "w": 18.76046901172529,
-              "h": 43.81909547738693,
-              "priority": "3"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s08",
-      "num": 51,
+      "num": 8,
       "name": "Palmovka",
       "tags": {
         "zmrz": true,
@@ -952,61 +366,23 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "molm0vguh90ru",
-          "label": "Palmovka prodejna",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "momn7qbrwdosx",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 36.26465661641541,
-              "y": 11.331658291457286,
-              "w": 24.45561139028475,
-              "h": 77.18592964824121,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s09",
-      "num": 511,
+      "num": 9,
       "name": "Palmovka cukrárna",
       "tags": {
-        "zmrz": false,
+        "zmrz": true,
         "tv": 0,
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": [
-        {
-          "id": "molm0nt61sps7",
-          "label": "Palmovka cuckárna pravá stěna",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mommwicvj0e5p",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 47.31993299832496,
-              "y": 24.943467336683415,
-              "w": 17.922948073701846,
-              "h": 61.105527638190964,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s10",
-      "num": 66,
+      "num": 10,
       "name": "Modřany",
       "tags": {
         "zmrz": false,
@@ -1014,41 +390,11 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": [
-        {
-          "id": "momn7hiahbh3l",
-          "label": "Pravá zeď u pultu",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "momn9qctb7zjl",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 29.564489112227804,
-              "y": 37.14824120603015,
-              "w": 12.060301507537687,
-              "h": 46.231155778894475,
-              "priority": "2"
-            },
-            {
-              "id": "momn9sg1oc2kr",
-              "label": "2",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 49.66499162479062,
-              "y": 18.253768844221106,
-              "w": 24.45561139028475,
-              "h": 66.73366834170855,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s11",
-      "num": 67,
+      "num": 11,
       "name": "Ruzyně",
       "tags": {
         "zmrz": true,
@@ -1056,174 +402,23 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaanr5uyecps",
-          "label": "Pohled zvenku",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaaxrjag57tt",
-              "label": "3",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 76.5704584040747,
-              "y": 26.76917199885398,
-              "w": 9.847198641765715,
-              "h": 28.52322286951262,
-              "priority": "2"
-            },
-            {
-              "id": "moaaxtv8xckvg",
-              "label": "2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 49.745331069609506,
-              "y": 27.991595836118805,
-              "w": 9.337860780984727,
-              "h": 30.968070544042277,
-              "priority": "1"
-            },
-            {
-              "id": "moaaxw8en0hic",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 4.244482173174872,
-              "y": 27.584121223697196,
-              "w": 10.186757215619696,
-              "h": 30.560595931620668,
-              "priority": "1"
-            },
-            {
-              "id": "mp5eh05fsty85",
-              "label": "A1 zvenku 4",
-              "type": "wall",
-              "campaignId": "mp5ekn4aqnn9r",
-              "x": 23.869346733668344,
-              "y": 34.4786432160804,
-              "w": 9.547738693467338,
-              "h": 25.7286432160804,
-              "priority": "3"
-            }
-          ]
-        },
-        {
-          "id": "moaao3jovl0qm",
-          "label": "Pohled zevnitř",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaaxzh2i7rq3",
-              "label": "3",
-              "type": "led_in",
-              "campaignId": "mok0qs85nczei",
-              "x": 16.129032258064516,
-              "y": 32.473816572756505,
-              "w": 7.470288624787777,
-              "h": 22.003629070766877,
-              "priority": "2"
-            },
-            {
-              "id": "moaay2b57ptpu",
-              "label": "2",
-              "type": "led_in",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 38.37011884550085,
-              "y": 30.84391812307007,
-              "w": 7.809847198641762,
-              "h": 25.26342597013975,
-              "priority": "1"
-            },
-            {
-              "id": "moaay4l4tpm9r",
-              "label": "1",
-              "type": "led_in",
-              "campaignId": "mok0rd44res0p",
-              "x": 83.3616298811545,
-              "y": 30.02896889822685,
-              "w": 10.016977928692697,
-              "h": 32.597968993728706,
-              "priority": "1"
-            }
-          ]
-        },
-        {
-          "id": "moaao9zqugpx2",
-          "label": "",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaay7nrwmr3p",
-              "label": "4",
-              "type": "klapram",
-              "campaignId": "mok0qs85nczei",
-              "x": 28.522920203735147,
-              "y": 26.765988603444434,
-              "w": 11.544991511035654,
-              "h": 34.22786744341515,
-              "priority": "3"
-            },
-            {
-              "id": "moaaya88l7k77",
-              "label": "5",
-              "type": "klapram",
-              "campaignId": "mok0s8atqdkos",
-              "x": 59.9320882852292,
-              "y": 27.58093782828765,
-              "w": 10.696095076400681,
-              "h": 32.59796899372871,
-              "priority": "3"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s12",
-      "num": 50,
-      "name": "Ostrovského",
+      "num": 12,
+      "name": "Smíchov",
       "tags": {
         "zmrz": true,
         "tv": 3,
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "mompsae084hd1",
-          "label": "",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "momptb0zb0b32",
-              "label": "1",
-              "type": "wall",
-              "campaignId": "mok0rd44res0p",
-              "x": 17.001675041876048,
-              "y": 8.35427135678392,
-              "w": 24.790619765494135,
-              "h": 82.81407035175879,
-              "priority": "2"
-            },
-            {
-              "id": "mompti8n3wnuu",
-              "label": "2",
-              "type": "wall",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 48.82747068676717,
-              "y": 13.982412060301508,
-              "w": 18.090452261306538,
-              "h": 73.5678391959799,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s13",
-      "num": 68,
+      "num": 13,
       "name": "Háje",
       "tags": {
         "zmrz": true,
@@ -1231,128 +426,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "mommzg5d4q3di",
-          "label": "Pohled zvenku",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mommzwev95i7i",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 14.656616415410383,
-              "y": 30.747487437185928,
-              "w": 7.705192629815748,
-              "h": 28.542713567839197,
-              "priority": "2"
-            },
-            {
-              "id": "mommzymh596n1",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 83.50083752093802,
-              "y": 28.73743718592965,
-              "w": 12.22780569514238,
-              "h": 34.17085427135679,
-              "priority": "2"
-            },
-            {
-              "id": "mp5ehq4cjevgj",
-              "label": "A1 zvenku 3",
-              "type": "wall",
-              "campaignId": "mp5ekn4aqnn9r",
-              "x": 62.395309882747064,
-              "y": 31.01130653266332,
-              "w": 10.887772194304866,
-              "h": 32.1608040201005,
-              "priority": "3"
-            }
-          ]
-        },
-        {
-          "id": "mommzlp5juqe1",
-          "label": "",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "momn01idcvaeb",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 18.174204355108877,
-              "y": 17.079145728643216,
-              "w": 22.445561139028477,
-              "h": 66.33165829145729,
-              "priority": "2"
-            },
-            {
-              "id": "momn047jqw7u6",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": "mok0s8atqdkos",
-              "x": 65.74539363484088,
-              "y": 9.842964824120603,
-              "w": 22.613065326633162,
-              "h": 71.55778894472363,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "momn1zjj423kb",
-          "label": "Pohled zevnitř",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "momn8av07ds1o",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 17.504187604690117,
-              "y": 17.204773869346734,
-              "w": 16.24790619765494,
-              "h": 57.08542713567839,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "momn24rneseht",
-          "label": "Pohled zevnitř roh",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "momn8eacjn4k3",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0s8atqdkos",
-              "x": 65.07537688442211,
-              "y": 15.596733668341708,
-              "w": 11.557788944723626,
-              "h": 51.45728643216081,
-              "priority": "2"
-            },
-            {
-              "id": "momn8gepyj0be",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 32.914572864321606,
-              "y": 10.772613065326633,
-              "w": 12.730318257956455,
-              "h": 50.653266331658294,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s14",
-      "num": 70,
+      "num": 14,
       "name": "DBK",
       "tags": {
         "zmrz": true,
@@ -1360,81 +438,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "mok26hqcicrq2",
-          "label": "Venkovní pohled",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mok277n8q32nf",
-              "label": "2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 12.563667232597622,
-              "y": 28.634641708846654,
-              "w": 11.884550084889645,
-              "h": 37.89513895520962,
-              "priority": "2"
-            },
-            {
-              "id": "mok279u1vgtsr",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 65.53480475382003,
-              "y": 29.449590933689873,
-              "w": 13.073005093378612,
-              "h": 40.33998662973927,
-              "priority": "2"
-            },
-            {
-              "id": "mp5ei100168p3",
-              "label": "A1 zvenku 3",
-              "type": "led_out",
-              "campaignId": "mp5ekn4aqnn9r",
-              "x": 37.10217755443886,
-              "y": 28.404522613065325,
-              "w": 15.912897822445565,
-              "h": 39.798994974874375,
-              "priority": "3"
-            }
-          ]
-        },
-        {
-          "id": "mok26taa1h1re",
-          "label": "Vnitří pohled nad pulty",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mok27c54telwg",
-              "label": "1",
-              "type": "led_in",
-              "campaignId": "mok0rd44res0p",
-              "x": 6.112054329371817,
-              "y": 16.817877948619998,
-              "w": 20.0339558573854,
-              "h": 63.56603953777099,
-              "priority": "2"
-            },
-            {
-              "id": "mok27etfkim0h",
-              "label": "2",
-              "type": "led_in",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 58.40407470288624,
-              "y": 19.67020023557126,
-              "w": 14.940577249575561,
-              "h": 55.82402190176042,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s15",
-      "num": 71,
+      "num": 15,
       "name": "Dejvice",
       "tags": {
         "zmrz": true,
@@ -1442,81 +450,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaarzx0q1na7",
-          "label": "Pohled zvenku",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaayjbjlxifo",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 35.31409168081494,
-              "y": 30.757966447012386,
-              "w": 7.979626485568758,
-              "h": 22.00362907076687,
-              "priority": "2"
-            },
-            {
-              "id": "moaaymccm45cf",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 75.89134125636672,
-              "y": 29.943017222169168,
-              "w": 7.809847198641776,
-              "h": 24.041002132874922,
-              "priority": "2"
-            },
-            {
-              "id": "mp5eiebvohwm3",
-              "label": "A1 zvenku 3",
-              "type": "wall",
-              "campaignId": "mp5ekn4aqnn9r",
-              "x": 89.0284757118928,
-              "y": 36.38819095477387,
-              "w": 7.872696817420433,
-              "h": 20.904522613065325,
-              "priority": "3"
-            }
-          ]
-        },
-        {
-          "id": "moaas9b4y95nv",
-          "label": "Pohled zevnitř",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaayp4olygyq",
-              "label": "A1 rám 1",
-              "type": "led_in",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 12.054329371816639,
-              "y": 12.829083500461591,
-              "w": 17.487266553480477,
-              "h": 50.934326552701116,
-              "priority": "2"
-            },
-            {
-              "id": "moaayrilbwcqk",
-              "label": "A1 rám 2",
-              "type": "led_in",
-              "campaignId": "mok0rd44res0p",
-              "x": 74.53310696095076,
-              "y": 25.868271097953077,
-              "w": 8.488964346349746,
-              "h": 30.560595931620675,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s16",
-      "num": 58,
+      "num": 16,
       "name": "Jesenice",
       "tags": {
         "zmrz": false,
@@ -1524,48 +462,11 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": [
-        {
-          "id": "mol9mclkd0ozw",
-          "label": "Venkovní pohled",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mol9n16a4iprs",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 50.76400679117148,
-              "y": 21.882660045204215,
-              "w": 15.959252971137516,
-              "h": 62.75109031292777,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "mol9mje4vr1h9",
-          "label": "Pohled zevnitř",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mol9mtn9zvdyt",
-              "label": "1",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 46.6893039049236,
-              "y": 12.510743959507211,
-              "w": 17.65704584040747,
-              "h": 56.638971126603636,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s17",
-      "num": 57,
+      "num": 17,
       "name": "Libeř",
       "tags": {
         "zmrz": true,
@@ -1573,114 +474,11 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": [
-        {
-          "id": "mok1xalirg5kt",
-          "label": "Zvenku",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mok31v5vlml46",
-              "label": "A1 zvenku 1",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 2.886247877758913,
-              "y": 32.33374717473658,
-              "w": 8.658743633276739,
-              "h": 28.523222869512615,
-              "priority": "2"
-            },
-            {
-              "id": "mok32249vvzew",
-              "label": "A1 zvenku 2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 17.147707979626485,
-              "y": 31.926272562314967,
-              "w": 8.998302207130731,
-              "h": 28.115748257091017,
-              "priority": "2"
-            },
-            {
-              "id": "mok32508mr6iq",
-              "label": "A1 zvenku 3",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 67.74193548387096,
-              "y": 29.481424887785312,
-              "w": 9.677419354838719,
-              "h": 28.52322286951262,
-              "priority": "2"
-            },
-            {
-              "id": "mok327msyuuxb",
-              "label": "A1 zvenku 4",
-              "type": "led_out",
-              "campaignId": "mok0s8atqdkos",
-              "x": 83.02207130730051,
-              "y": 29.88889950020692,
-              "w": 8.828522920203739,
-              "h": 28.52322286951262,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "mok1zen97mi15",
-          "label": "Zevnitř",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mok32t4dfww7z",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0s8atqdkos",
-              "x": 3.5653650254668934,
-              "y": 31.111323337471745,
-              "w": 8.488964346349746,
-              "h": 26.893324419826186,
-              "priority": "2"
-            },
-            {
-              "id": "mok32vstd70lc",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 17.65704584040747,
-              "y": 32.74122178715818,
-              "w": 7.809847198641769,
-              "h": 26.078375194982975,
-              "priority": "2"
-            },
-            {
-              "id": "mok32ytdjwoc7",
-              "label": "A1 rám 3",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 67.7419,
-              "y": 30.2964,
-              "w": 10.1868,
-              "h": 29.7456,
-              "priority": "2"
-            },
-            {
-              "id": "mok331unjfn7d",
-              "label": "A1 rám 4",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 83.1918505942275,
-              "y": 31.111323337471745,
-              "w": 9.168081494057716,
-              "h": 27.300799032247795,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s18",
-      "num": 72,
+      "num": 18,
       "name": "Vysočany",
       "tags": {
         "zmrz": false,
@@ -1688,30 +486,11 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": [
-        {
-          "id": "moaaupyrc59lx",
-          "label": "Pohled do prodejny",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaaz05si6617",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 33.446519524618,
-              "y": 18.571928819278643,
-              "w": 10.356536502546689,
-              "h": 36.265240505523195,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s19",
-      "num": 74,
+      "num": 19,
       "name": "České Budějovice",
       "tags": {
         "zmrz": true,
@@ -1719,132 +498,11 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaat27thhkjo",
-          "label": "Venkovní strana, ulice Hroznová",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaaz3bkch935",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0s8atqdkos",
-              "x": 2.5466893039049237,
-              "y": 32.70938783306275,
-              "w": 7.8098471986417675,
-              "h": 33.00544360615031,
-              "priority": "2"
-            },
-            {
-              "id": "moaaz5cvwcov8",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 48.89643463497453,
-              "y": 35.1542355075924,
-              "w": 6.281833616298812,
-              "h": 21.596154458345268,
-              "priority": "2"
-            },
-            {
-              "id": "moaaz79col653",
-              "label": "A1 rám 3",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 59.9320882852292,
-              "y": 35.969184732435615,
-              "w": 5.94227504244482,
-              "h": 19.96625600865884,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "moaatanr2foth",
-          "label": "Venkovní strana, ulice Krajinská- směr do centra",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaazllnqpbbs",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 19.864176570458405,
-              "y": 44.933626205711015,
-              "w": 10.016977928692697,
-              "h": 32.19049438130711,
-              "priority": "2"
-            },
-            {
-              "id": "moaazob94r8c2",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 38.879456706281836,
-              "y": 43.30372775602457,
-              "w": 11.035653650254666,
-              "h": 34.63534205583676,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "mok1rajrgld4o",
-          "label": "Pohled zevnitř",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mokg10tbnbpn1",
-              "label": "A1 uvnitř 1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 4.584040747028863,
-              "y": 18.556011842230923,
-              "w": 12.563667232597624,
-              "h": 44.41473275395537,
-              "priority": "2"
-            },
-            {
-              "id": "mokg13vyvy4qb",
-              "label": "A1 uvnitř 2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 27.843803056027166,
-              "y": 22.630757966447014,
-              "w": 10.18675721561969,
-              "h": 35.85776589310158,
-              "priority": "2"
-            },
-            {
-              "id": "mokg16bswxrb3",
-              "label": "A1 uvnitř 3",
-              "type": "led_out",
-              "campaignId": "mok0s8atqdkos",
-              "x": 60.101867572156195,
-              "y": 23.038232578868623,
-              "w": 10.016977928692697,
-              "h": 34.22786744341515,
-              "priority": "2"
-            },
-            {
-              "id": "mokg1951y2jih",
-              "label": "A1 uvnitř 4",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 81.32427843803056,
-              "y": 21.000859516760574,
-              "w": 13.41256366723259,
-              "h": 44.00725814153377,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s20",
-      "num": 75,
+      "num": 20,
       "name": "I.P. Pavlova",
       "tags": {
         "zmrz": true,
@@ -1852,70 +510,11 @@
         "kiosek": true,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "moaatj1twv8d0",
-          "label": "Z venku",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "moaazss5i0zbu",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 18.33616298811545,
-              "y": 30.140387737560882,
-              "w": 10.186757215619696,
-              "h": 29.338172094355837,
-              "priority": "2"
-            },
-            {
-              "id": "moaazvgf12n3j",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 64.17657045840407,
-              "y": 32.177760799668924,
-              "w": 9.16808149405773,
-              "h": 28.52322286951263,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "moaatqx6dg0m0",
-          "label": "Zevnitř",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "mok1vfr32xfje",
-              "label": "A1 rám 1",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 65.36502546689303,
-              "y": 32.98315983828351,
-              "w": 8.149405772495768,
-              "h": 26.078375194982968,
-              "priority": "2"
-            },
-            {
-              "id": "mok1vigfbpbxf",
-              "label": "A1 rám 2",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 18.845500848896435,
-              "y": 31.760736001018685,
-              "w": 9.33786078098472,
-              "h": 27.300799032247795,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
     },
     {
       "id": "s21",
-      "num": 76,
+      "num": 21,
       "name": "OC Smíchov",
       "tags": {
         "zmrz": false,
@@ -1923,66 +522,19 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": [
-        {
-          "id": "mok1vtnb85kfi",
-          "label": "Zvenku",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "momn90ttob4jj",
-              "label": "A1 zvenku 1",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 38.60971524288107,
-              "y": 38.925879396984925,
-              "w": 8.040201005025125,
-              "h": 31.75879396984925,
-              "priority": "2"
-            },
-            {
-              "id": "momn93xk11jlo",
-              "label": "A1 zvenku 2",
-              "type": "led_out",
-              "campaignId": "mok0rtmtlpin9",
-              "x": 49.497487437185924,
-              "y": 38.925879396984925,
-              "w": 9.882747068676728,
-              "h": 33.366834170854275,
-              "priority": "2"
-            }
-          ]
-        },
-        {
-          "id": "mok1w02nzgfqr",
-          "label": "Interiér",
-          "src": "__idb__",
-          "rects": [
-            {
-              "id": "momn96fnohjz1",
-              "label": "A1 uvnitř 1",
-              "type": "led_out",
-              "campaignId": "mok0qs85nczei",
-              "x": 21.691792294807367,
-              "y": 5.961055276381909,
-              "w": 23.61809045226131,
-              "h": 89.2462311557789,
-              "priority": "2"
-            },
-            {
-              "id": "momn98tsljpa8",
-              "label": "A1 uvnitř 2",
-              "type": "led_out",
-              "campaignId": "mok0rd44res0p",
-              "x": 58.87772194304858,
-              "y": 12.795226130653267,
-              "w": 23.283082077051922,
-              "h": 81.20603015075376,
-              "priority": "2"
-            }
-          ]
-        }
-      ]
+      "photos": []
+    },
+    {
+      "id": "s22",
+      "num": 22,
+      "name": "Hl. Nádraží",
+      "tags": {
+        "zmrz": true,
+        "tv": 6,
+        "kiosek": true,
+        "vyrobna": false
+      },
+      "photos": []
     }
   ]
 }
