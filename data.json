@@ -269,6 +269,16 @@
       "dateFrom": null,
       "dateTo": null,
       "createdAt": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "id": "mo8l8efkjfwvk",
+      "name": "Svatební koláče",
+      "stock": 1,
+      "photo": "https://drive.google.com/thumbnail?id=1aW3vQqTKTF5ngbobUIRYf_xQ4DXOMkqY&sz=w400",
+      "note": "",
+      "dateFrom": null,
+      "dateTo": null,
+      "createdAt": "2026-04-21T12:16:19.472Z"
     }
   ],
   "stores": [
@@ -294,7 +304,35 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaavmw5zle2e",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaaw95ofyo25",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 26.6553480475382,
+              "y": 33.98592939228982,
+              "w": 7.809847198641766,
+              "h": 28.115748257091006
+            },
+            {
+              "id": "moaawby8kmjge",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 51.44312393887945,
+              "y": 34.39340400471143,
+              "w": 8.828522920203739,
+              "h": 27.708273644669397
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "s03",
@@ -318,7 +356,79 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaalw0p2jyp1",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaawivzg84ke",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 10.35653650254669,
+              "y": 19.47919651099863,
+              "w": 19.524617996604412,
+              "h": 56.23149651418203
+            },
+            {
+              "id": "moaawlkfwtu4q",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 67.91171477079796,
+              "y": 21.516569573106676,
+              "w": 12.393887945670642,
+              "h": 50.5268519402795
+            }
+          ]
+        },
+        {
+          "id": "moaam3e8kcd1g",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaawo1v3vner",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 2.7164685908319184,
+              "y": 21.924044185528285,
+              "w": 19.524617996604412,
+              "h": 61.93614108808454
+            },
+            {
+              "id": "moaawralyqgh6",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 65.53480475382003,
+              "y": 20.294145735841848,
+              "w": 19.01528013582343,
+              "h": 63.566039537770976
+            }
+          ]
+        },
+        {
+          "id": "moaam9np8tapn",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaawu6q8gziq",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 37.6911,
+              "y": 20.6984,
+              "w": 12.7335,
+              "h": 42.3774
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "s05",
@@ -330,7 +440,89 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaamo3kkx1md",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaax3k8m53bu",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 3.395585738539898,
+              "y": 25.46397988094101,
+              "w": 12.733446519524618,
+              "h": 41.96988507942572
+            },
+            {
+              "id": "moaax67eod80b",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 44.312393887945674,
+              "y": 36.05831980390285,
+              "w": 7.640067911714766,
+              "h": 30.15312131919906
+            },
+            {
+              "id": "moaax8g5mutva",
+              "label": "A1 rám 3",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 77.24957555178268,
+              "y": 42.17043899022698,
+              "w": 9.16808149405773,
+              "h": 25.263425970139757
+            }
+          ]
+        },
+        {
+          "id": "moaan11jymbrb",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaaxb5m5jhxh",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 18.675721561969443,
+              "y": 30.35367523000032,
+              "w": 8.998302207130727,
+              "h": 30.15312131919905
+            },
+            {
+              "id": "moaaxdh7kdwpz",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 56.536502546689306,
+              "y": 23.834081431254575,
+              "w": 11.035653650254673,
+              "h": 38.71008818005285
+            }
+          ]
+        },
+        {
+          "id": "moaan99h4k5l0",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaaxglcsd7ot",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 45.840407470288625,
+              "y": 29.535542609747555,
+              "w": 9.33786078098472,
+              "h": 30.56059593162067
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "s06",
@@ -402,7 +594,109 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaanr5uyecps",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaaxrjag57tt",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 76.5704584040747,
+              "y": 26.76917199885398,
+              "w": 9.847198641765715,
+              "h": 28.52322286951262
+            },
+            {
+              "id": "moaaxtv8xckvg",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 49.745331069609506,
+              "y": 27.991595836118805,
+              "w": 9.337860780984727,
+              "h": 30.968070544042277
+            },
+            {
+              "id": "moaaxw8en0hic",
+              "label": "A1 rám 3",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 4.244482173174872,
+              "y": 27.584121223697196,
+              "w": 10.186757215619696,
+              "h": 30.560595931620668
+            }
+          ]
+        },
+        {
+          "id": "moaao3jovl0qm",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaaxzh2i7rq3",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 16.129032258064516,
+              "y": 32.473816572756505,
+              "w": 7.470288624787777,
+              "h": 22.003629070766877
+            },
+            {
+              "id": "moaay2b57ptpu",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 38.37011884550085,
+              "y": 30.84391812307007,
+              "w": 7.809847198641762,
+              "h": 25.26342597013975
+            },
+            {
+              "id": "moaay4l4tpm9r",
+              "label": "A1 rám 3",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 83.3616298811545,
+              "y": 30.02896889822685,
+              "w": 10.016977928692697,
+              "h": 32.597968993728706
+            }
+          ]
+        },
+        {
+          "id": "moaao9zqugpx2",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaay7nrwmr3p",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 28.522920203735147,
+              "y": 26.765988603444434,
+              "w": 11.544991511035654,
+              "h": 34.22786744341515
+            },
+            {
+              "id": "moaaya88l7k77",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 59.9320882852292,
+              "y": 27.58093782828765,
+              "w": 10.696095076400681,
+              "h": 32.59796899372871
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "s12",
@@ -438,7 +732,14 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaaoi6nfp2in",
+          "label": "",
+          "src": "__idb__",
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s15",
@@ -450,7 +751,62 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaarzx0q1na7",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaayjbjlxifo",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 35.31409168081494,
+              "y": 30.757966447012386,
+              "w": 7.979626485568758,
+              "h": 22.00362907076687
+            },
+            {
+              "id": "moaaymccm45cf",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 75.89134125636672,
+              "y": 29.943017222169168,
+              "w": 7.809847198641776,
+              "h": 24.041002132874922
+            }
+          ]
+        },
+        {
+          "id": "moaas9b4y95nv",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaayp4olygyq",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 12.054329371816639,
+              "y": 12.829083500461591,
+              "w": 17.487266553480477,
+              "h": 50.934326552701116
+            },
+            {
+              "id": "moaayrilbwcqk",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 74.53310696095076,
+              "y": 25.868271097953077,
+              "w": 8.488964346349746,
+              "h": 30.560595931620675
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "s16",
@@ -462,7 +818,31 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "mo8zqodu7via5",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaayvkmtxo0q",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 31.57894736842105,
+              "y": 31.448763250883395,
+              "w": 8.828522920203735,
+              "h": 29.33817209435584
+            }
+          ]
+        },
+        {
+          "id": "moaasnyvbh93h",
+          "label": "",
+          "src": "__idb__",
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s17",
@@ -486,7 +866,25 @@
         "kiosek": false,
         "vyrobna": false
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaaupyrc59lx",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaaz05si6617",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 33.446519524618,
+              "y": 18.571928819278643,
+              "w": 10.356536502546689,
+              "h": 36.265240505523195
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "s19",
@@ -498,7 +896,72 @@
         "kiosek": false,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaat27thhkjo",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaaz3bkch935",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 2.5466893039049237,
+              "y": 32.70938783306275,
+              "w": 7.8098471986417675,
+              "h": 33.00544360615031
+            },
+            {
+              "id": "moaaz5cvwcov8",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 48.89643463497453,
+              "y": 35.1542355075924,
+              "w": 6.281833616298812,
+              "h": 21.596154458345268
+            },
+            {
+              "id": "moaaz79col653",
+              "label": "A1 rám 3",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 59.9320882852292,
+              "y": 35.969184732435615,
+              "w": 5.94227504244482,
+              "h": 19.96625600865884
+            }
+          ]
+        },
+        {
+          "id": "moaatanr2foth",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaazllnqpbbs",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 19.864176570458405,
+              "y": 44.933626205711015,
+              "w": 10.016977928692697,
+              "h": 32.19049438130711
+            },
+            {
+              "id": "moaazob94r8c2",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 38.879456706281836,
+              "y": 43.30372775602457,
+              "w": 11.035653650254666,
+              "h": 34.63534205583676
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "s20",
@@ -510,7 +973,41 @@
         "kiosek": true,
         "vyrobna": true
       },
-      "photos": []
+      "photos": [
+        {
+          "id": "moaatj1twv8d0",
+          "label": "",
+          "src": "__idb__",
+          "rects": [
+            {
+              "id": "moaazss5i0zbu",
+              "label": "A1 rám 1",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 18.33616298811545,
+              "y": 30.140387737560882,
+              "w": 10.186757215619696,
+              "h": 29.338172094355837
+            },
+            {
+              "id": "moaazvgf12n3j",
+              "label": "A1 rám 2",
+              "type": "led_out",
+              "campaignId": null,
+              "x": 64.17657045840407,
+              "y": 32.177760799668924,
+              "w": 9.16808149405773,
+              "h": 28.52322286951263
+            }
+          ]
+        },
+        {
+          "id": "moaatqx6dg0m0",
+          "label": "",
+          "src": null,
+          "rects": []
+        }
+      ]
     },
     {
       "id": "s21",
